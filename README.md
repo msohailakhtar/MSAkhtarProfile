@@ -1,2 +1,0 @@
-# MSAkhtarProfile
-About me
