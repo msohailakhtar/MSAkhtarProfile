@@ -1,0 +1,873 @@
+/* =========================================================
+   MUHAMMAD SOHAIL AKHTAR
+   PREMIUM ACADEMIC NAVIGATION
+   LIGHT INTERNATIONAL RESEARCH THEME
+   Version 3.0
+========================================================= */
+
+
+/* =========================================================
+   01. HEADER
+========================================================= */
+
+.profile-header {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    z-index: 5000;
+
+    width: 100%;
+
+    padding:
+        18px 0;
+
+    background:
+        rgba(255,255,255,.78);
+
+    border-bottom:
+        1px solid transparent;
+
+    backdrop-filter:
+        blur(18px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(18px)
+        saturate(140%);
+
+    transition:
+        padding 350ms ease,
+        background 350ms ease,
+        border-color 350ms ease,
+        box-shadow 350ms ease;
+
+}
+
+
+/* =========================================================
+   02. SCROLLED HEADER
+========================================================= */
+
+.profile-header.scrolled {
+
+    padding:
+        10px 0;
+
+    background:
+        rgba(255,255,255,.94);
+
+    border-bottom:
+        1px solid var(--color-border);
+
+    box-shadow:
+        0 8px 30px
+        rgba(15,35,60,.06);
+
+}
+
+
+/* =========================================================
+   03. NAVBAR
+========================================================= */
+
+.navbar {
+
+    width: 100%;
+
+}
+
+
+.navbar-container {
+
+    width:
+        min(
+            calc(100% - 48px),
+            var(--container-width)
+        );
+
+    min-height:
+        58px;
+
+    margin:
+        0 auto;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    gap:
+        30px;
+
+}
+
+
+/* =========================================================
+   04. LOGO
+========================================================= */
+
+.navbar-logo {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        13px;
+
+    flex-shrink:
+        0;
+
+    color:
+        var(--color-text-dark);
+
+}
+
+
+.logo-symbol {
+
+    display:
+        grid;
+
+    place-items:
+        center;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    border:
+        1px solid
+        var(--color-primary);
+
+    border-radius:
+        10px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #eef4f9
+        );
+
+    color:
+        var(--color-primary);
+
+    font-family:
+        var(--font-display);
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        -.04em;
+
+    box-shadow:
+        0 5px 15px
+        rgba(18,60,105,.07);
+
+    transition:
+        transform var(--transition),
+        background var(--transition),
+        color var(--transition);
+
+}
+
+
+.navbar-logo:hover .logo-symbol {
+
+    transform:
+        translateY(-2px);
+
+    background:
+        var(--color-primary);
+
+    color:
+        #ffffff;
+
+}
+
+
+.logo-text {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        1px;
+
+}
+
+
+.logo-main {
+
+    display:
+        block;
+
+    color:
+        var(--color-text-dark);
+
+    font-family:
+        var(--font-body);
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        .08em;
+
+    line-height:
+        1.2;
+
+}
+
+
+.logo-sub {
+
+    display:
+        block;
+
+    color:
+        var(--color-text-muted);
+
+    font-family:
+        var(--font-mono);
+
+    font-size:
+        7.5px;
+
+    font-weight:
+        400;
+
+    letter-spacing:
+        .04em;
+
+    line-height:
+        1.4;
+
+    white-space:
+        nowrap;
+
+}
+
+
+/* =========================================================
+   05. NAV MENU
+========================================================= */
+
+.nav-menu {
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        flex-end;
+
+    gap:
+        5px;
+
+}
+
+
+.nav-menu li {
+
+    position:
+        relative;
+
+}
+
+
+.nav-menu a {
+
+    position:
+        relative;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    min-height:
+        42px;
+
+    padding:
+        0 13px;
+
+    border-radius:
+        8px;
+
+    color:
+        var(--color-text-muted);
+
+    font-size:
+        12px;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        .01em;
+
+    transition:
+        color var(--transition),
+        background var(--transition);
+
+}
+
+
+/* =========================================================
+   NAV HOVER
+========================================================= */
+
+.nav-menu a:hover {
+
+    color:
+        var(--color-primary);
+
+    background:
+        var(--color-primary-light);
+
+}
+
+
+/* =========================================================
+   ACTIVE NAV
+========================================================= */
+
+.nav-menu a.active {
+
+    color:
+        var(--color-primary);
+
+    background:
+        var(--color-primary-light);
+
+}
+
+
+.nav-menu a.active::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    left:
+        50%;
+
+    bottom:
+        3px;
+
+    width:
+        4px;
+
+    height:
+        4px;
+
+    border-radius:
+        50%;
+
+    background:
+        var(--color-accent);
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+/* =========================================================
+   06. MOBILE MENU BUTTON
+========================================================= */
+
+.menu-toggle {
+
+    display:
+        none;
+
+    position:
+        relative;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    flex-shrink:
+        0;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    flex-direction:
+        column;
+
+    gap:
+        5px;
+
+    border:
+        1px solid
+        var(--color-border);
+
+    border-radius:
+        10px;
+
+    background:
+        rgba(255,255,255,.9);
+
+    transition:
+        background var(--transition),
+        border-color var(--transition);
+
+}
+
+
+.menu-toggle:hover {
+
+    background:
+        var(--color-primary-light);
+
+    border-color:
+        var(--color-border-blue);
+
+}
+
+
+.menu-toggle span {
+
+    display:
+        block;
+
+    width:
+        18px;
+
+    height:
+        1.5px;
+
+    border-radius:
+        10px;
+
+    background:
+        var(--color-primary);
+
+    transition:
+        transform 300ms ease,
+        opacity 300ms ease;
+
+}
+
+
+/* =========================================================
+   07. MOBILE ACTIVE ICON
+========================================================= */
+
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+
+    transform:
+        translateY(6.5px)
+        rotate(45deg);
+
+}
+
+
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+
+    opacity:
+        0;
+
+}
+
+
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+
+    transform:
+        translateY(-6.5px)
+        rotate(-45deg);
+
+}
+
+
+/* =========================================================
+   08. DESKTOP NAV DECORATION
+========================================================= */
+
+.navbar-container::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    right:
+        0;
+
+    top:
+        0;
+
+    width:
+        80px;
+
+    height:
+        1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--color-accent)
+        );
+
+    opacity:
+        .35;
+
+}
+
+
+/* =========================================================
+   09. TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .navbar-container {
+
+        width:
+            min(
+                calc(100% - 40px),
+                var(--container-width)
+            );
+
+    }
+
+
+    .nav-menu {
+
+        gap:
+            0;
+
+    }
+
+
+    .nav-menu a {
+
+        padding:
+            0 9px;
+
+        font-size:
+            11px;
+
+    }
+
+
+    .logo-sub {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* =========================================================
+   10. MOBILE NAVIGATION
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .profile-header {
+
+        padding:
+            12px 0;
+
+    }
+
+
+    .profile-header.scrolled {
+
+        padding:
+            9px 0;
+
+    }
+
+
+    .navbar-container {
+
+        width:
+            calc(100% - 32px);
+
+        min-height:
+            52px;
+
+    }
+
+
+    .menu-toggle {
+
+        display:
+            flex;
+
+    }
+
+
+    .nav-menu {
+
+        position:
+            absolute;
+
+        top:
+            calc(100% + 8px);
+
+        left:
+            16px;
+
+        right:
+            16px;
+
+        display:
+            flex;
+
+        flex-direction:
+            column;
+
+        align-items:
+            stretch;
+
+        gap:
+            4px;
+
+        padding:
+            10px;
+
+        border:
+            1px solid
+            var(--color-border);
+
+        border-radius:
+            16px;
+
+        background:
+            rgba(255,255,255,.97);
+
+        box-shadow:
+            0 20px 50px
+            rgba(15,35,60,.12);
+
+        backdrop-filter:
+            blur(18px);
+
+        -webkit-backdrop-filter:
+            blur(18px);
+
+        opacity:
+            0;
+
+        visibility:
+            hidden;
+
+        transform:
+            translateY(-8px)
+            scale(.98);
+
+        transform-origin:
+            top center;
+
+        pointer-events:
+            none;
+
+        transition:
+            opacity 250ms ease,
+            visibility 250ms ease,
+            transform 250ms ease;
+
+    }
+
+
+    .nav-menu.active {
+
+        opacity:
+            1;
+
+        visibility:
+            visible;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        pointer-events:
+            auto;
+
+    }
+
+
+    .nav-menu li {
+
+        width:
+            100%;
+
+    }
+
+
+    .nav-menu a {
+
+        width:
+            100%;
+
+        min-height:
+            48px;
+
+        justify-content:
+            flex-start;
+
+        padding:
+            0 15px;
+
+        border-radius:
+            10px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .nav-menu a.active::after {
+
+        left:
+            auto;
+
+        right:
+            14px;
+
+        bottom:
+            50%;
+
+        transform:
+            translateY(50%);
+
+    }
+
+
+    .navbar-container::after {
+
+        display:
+            none;
+
+    }
+
+}
+
+
+/* =========================================================
+   11. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .navbar-container {
+
+        width:
+            calc(100% - 24px);
+
+    }
+
+
+    .logo-symbol {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        border-radius:
+            9px;
+
+        font-size:
+            13px;
+
+    }
+
+
+    .logo-main {
+
+        font-size:
+            11px;
+
+    }
+
+
+    .logo-sub {
+
+        display:
+            none;
+
+    }
+
+
+    .nav-menu {
+
+        left:
+            12px;
+
+        right:
+            12px;
+
+    }
+
+}
+
+
+/* =========================================================
+   12. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .profile-header,
+    .navbar-logo,
+    .logo-symbol,
+    .nav-menu,
+    .menu-toggle span,
+    .nav-menu a {
+
+        transition:
+            none;
+
+    }
+
+}
