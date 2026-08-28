@@ -1,3649 +1,3318 @@
-/* =========================================================
-   MUHAMMAD SOHAIL AKHTAR
-   PERSONAL ACADEMIC PROFILE
-   PREMIUM INTERNATIONAL RESEARCH THEME
-   Version 4.0
-========================================================= */
+```html
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <!-- =========================================================
+         BASIC META
+    ========================================================== -->
 
-/* =========================================================
-   01. PROFILE DESIGN SYSTEM
-========================================================= */
+    <meta charset="UTF-8">
 
-:root {
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    --profile-bg: #f8fafc;
-    --profile-surface: #ffffff;
-    --profile-surface-soft: #f4f7fa;
+    <meta
+        name="description"
+        content="Muhammad Sohail Akhtar — Mathematics, Artificial Intelligence, Machine Learning and Autonomous Systems researcher and educator."
+    >
 
-    --profile-text: #172033;
-    --profile-text-dark: #0b1628;
-    --profile-text-soft: #526174;
-    --profile-text-muted: #7b8798;
+    <meta
+        name="keywords"
+        content="Muhammad Sohail Akhtar, Mathematics, Artificial Intelligence, Machine Learning, Autonomous Systems, Reinforcement Learning, Mathematical AI, NUST, PMAI Lab, Mathematics Educator, Researcher"
+    >
 
-    --profile-primary: #123c69;
-    --profile-primary-dark: #0b2949;
-    --profile-accent: #1687a7;
-    --profile-accent-soft: #e8f7fa;
+    <meta
+        name="author"
+        content="Muhammad Sohail Akhtar"
+    >
 
-    --profile-gold: #a27b28;
+    <meta
+        name="robots"
+        content="index, follow"
+    >
 
-    --profile-border: #e2e8f0;
-    --profile-border-soft: #edf1f5;
-    --profile-border-blue: #d4e3f0;
-
-    --profile-container: 1180px;
-
-    --profile-radius-sm: 10px;
-    --profile-radius-md: 16px;
-    --profile-radius-lg: 24px;
-    --profile-radius-xl: 32px;
-
-    --profile-shadow-xs:
-        0 4px 15px rgba(15, 35, 60, .035);
-
-    --profile-shadow-sm:
-        0 10px 30px rgba(15, 35, 60, .06);
-
-    --profile-shadow-md:
-        0 20px 55px rgba(15, 35, 60, .09);
-
-    --profile-shadow-lg:
-        0 30px 80px rgba(15, 35, 60, .12);
-
-    --profile-transition:
-        320ms cubic-bezier(.2,.65,.3,1);
-
-}
-
-
-/* =========================================================
-   02. PROFILE PAGE FOUNDATION
-========================================================= */
-
-.profile-page {
-
-    position: relative;
-
-    min-height: 100vh;
-
-    overflow: hidden;
-
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f8fafc 45%,
-            #ffffff 100%
-        );
-
-    color: var(--profile-text);
-
-}
-
-
-/* =========================================================
-   03. PROFILE CONTAINER
-========================================================= */
-
-.profile-page .profile-container {
-
-    width:
-        min(
-            calc(100% - 48px),
-            var(--profile-container)
-        );
-
-    margin-inline: auto;
-
-}
-
-
-/* =========================================================
-   04. AMBIENT BACKGROUND
-========================================================= */
-
-.profile-page .ambient-background {
-
-    position: fixed;
-
-    inset: 0;
-
-    z-index: -1;
-
-    pointer-events: none;
-
-    overflow: hidden;
-
-    background:
-
-        radial-gradient(
-            circle at 8% 12%,
-            rgba(22,135,167,.055),
-            transparent 25%
-        ),
-
-        radial-gradient(
-            circle at 92% 28%,
-            rgba(18,60,105,.045),
-            transparent 28%
-        ),
-
-        radial-gradient(
-            circle at 55% 85%,
-            rgba(22,135,167,.035),
-            transparent 30%
-        );
-
-}
-
-
-/* Mathematical grid */
-
-.profile-page .ambient-background::before {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    background-image:
-
-        linear-gradient(
-            rgba(18,60,105,.022) 1px,
-            transparent 1px
-        ),
-
-        linear-gradient(
-            90deg,
-            rgba(18,60,105,.022) 1px,
-            transparent 1px
-        );
-
-    background-size:
-        72px 72px;
-
-    mask-image:
-        linear-gradient(
-            to bottom,
-            black,
-            transparent 85%
-        );
-
-}
-
-
-/* =========================================================
-   05. MATHEMATICAL FLOATING ELEMENTS
-========================================================= */
-
-.profile-page .math-float {
-
-    color:
-        rgba(18,60,105,.045);
-
-    font-family:
-        var(--font-display);
-
-    user-select:
-        none;
-
-    pointer-events:
-        none;
-
-}
-
-
-/* Different visual weights */
-
-.profile-page .math-01,
-.profile-page .math-05 {
-
-    opacity: .75;
-
-}
-
-
-.profile-page .math-02,
-.profile-page .math-07 {
-
-    opacity: .55;
-
-}
-
-
-.profile-page .math-03,
-.profile-page .math-06 {
-
-    opacity: .45;
-
-}
-
-
-/* =========================================================
-   06. HERO SECTION
-========================================================= */
-
-.profile-hero {
-
-    position: relative;
-
-    min-height:
-        760px;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    padding:
-        145px 0 90px;
-
-    overflow:
-        hidden;
-
-}
-
-
-/* Hero container */
-
-.profile-hero .hero-grid {
-
-    position: relative;
-
-    width:
-        min(
-            calc(100% - 48px),
-            var(--profile-container)
-        );
-
-    margin-inline:
-        auto;
-
-}
-
-
-/* =========================================================
-   07. HERO GRID
-========================================================= */
-
-.profile-hero .hero-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        minmax(0, 1.08fr)
-        minmax(390px, .92fr);
-
-    align-items:
-        center;
-
-    gap:
-        75px;
-
-}
-
-
-/* =========================================================
-   08. HERO CONTENT
-========================================================= */
-
-.hero-content {
-
-    position:
-        relative;
-
-    z-index:
-        5;
-
-}
-
-
-/* =========================================================
-   09. HERO STATUS
-========================================================= */
-
-.hero-status {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    gap:
-        9px;
-
-    margin-bottom:
-        24px;
-
-    padding:
-        8px 13px;
-
-    border:
-        1px solid
-        rgba(22,135,167,.18);
-
-    border-radius:
-        999px;
-
-    background:
-        rgba(232,247,250,.65);
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        .08em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-/* Status dot */
-
-.hero-status::before {
-
-    content:
-        "";
-
-    width:
-        6px;
-
-    height:
-        6px;
-
-    border-radius:
-        50%;
-
-    background:
-        var(--profile-accent);
-
-    box-shadow:
-        0 0 0 5px
-        rgba(22,135,167,.08);
-
-}
-
-
-/* =========================================================
-   10. HERO KICKER
-========================================================= */
-
-.hero-kicker {
-
-    display:
-        block;
-
-    margin-bottom:
-        12px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        11px;
-
-    letter-spacing:
-        .15em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-/* =========================================================
-   11. HERO HEADING
-========================================================= */
-
-.profile-hero h1 {
-
-    max-width:
-        760px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        clamp(
-            54px,
-            6.4vw,
-            86px
-        );
-
-    font-weight:
-        600;
-
-    line-height:
-        .98;
-
-    letter-spacing:
-        -.045em;
-
-}
-
-
-/* Name gradient */
-
-.profile-hero h1 span {
-
-    display:
-        inline-block;
-
-    background:
-
-        linear-gradient(
-            110deg,
-            var(--profile-text-dark) 0%,
-            var(--profile-primary) 42%,
-            var(--profile-accent) 78%,
-            #2f6aa3 100%
-        );
-
-    -webkit-background-clip:
-        text;
-
-    background-clip:
-        text;
-
-    color:
-        transparent;
-
-}
-
-
-/* =========================================================
-   12. HERO LEAD
-========================================================= */
-
-.hero-lead {
-
-    max-width:
-        650px;
-
-    margin-top:
-        28px;
-
-    color:
-        var(--profile-text-soft);
-
-    font-size:
-        17px;
-
-    line-height:
-        1.85;
-
-}
-
-
-/* =========================================================
-   13. HERO BUTTONS
-========================================================= */
-
-.hero-actions {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        12px;
-
-    margin-top:
-        34px;
-
-}
-
-
-/* =========================================================
-   14. HERO TAGS
-========================================================= */
-
-.hero-tags {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        8px;
-
-    margin-top:
-        28px;
-
-}
-
-
-.hero-tags span {
-
-    display:
-        inline-flex;
-
-    align-items:
-        center;
-
-    min-height:
-        31px;
-
-    padding:
-        0 11px;
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        999px;
-
-    background:
-        rgba(255,255,255,.75);
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        10px;
-
-    font-weight:
-        600;
-
-    transition:
-        var(--profile-transition);
-
-}
-
-
-.hero-tags span:hover {
-
-    transform:
-        translateY(-2px);
-
-    border-color:
-        rgba(22,135,167,.25);
-
-    color:
-        var(--profile-accent);
-
-}
-
-
-/* =========================================================
-   15. HERO VISUAL
-========================================================= */
-
-.hero-visual {
-
-    position:
-        relative;
-
-    min-height:
-        560px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-}
-
-
-/* =========================================================
-   16. PHOTO FRAME
-========================================================= */
-
-.hero-photo-frame {
-
-    position:
-        relative;
-
-    z-index:
-        4;
-
-    width:
-        min(
-            390px,
-            75vw
-        );
-
-    aspect-ratio:
-        4 / 5;
-
-    padding:
-        10px;
-
-    border:
-        1px solid
-        rgba(18,60,105,.18);
-
-    border-radius:
-        28px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #edf3f7
-        );
-
-    box-shadow:
-        0 35px 85px
-        rgba(15,35,60,.14);
-
-    transform:
-        rotate(1deg);
-
-    transition:
-        transform 600ms
-        cubic-bezier(.2,.65,.3,1);
-
-}
-
-
-.hero-photo-frame:hover {
-
-    transform:
-        rotate(0deg)
-        translateY(-8px);
-
-}
-
-
-.hero-photo-frame img {
-
-    width:
-        100%;
-
-    height:
-        100%;
-
-    object-fit:
-        cover;
-
-    border-radius:
-        21px;
-
-}
-
-
-/* Inner border */
-
-.hero-photo-frame::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    inset:
-        17px;
-
-    z-index:
-        2;
-
-    border:
-        1px solid
-        rgba(255,255,255,.8);
-
-    border-radius:
-        17px;
-
-    pointer-events:
-        none;
-
-}
-
-
-/* =========================================================
-   17. PHOTO OVERLAY
-========================================================= */
-
-.photo-overlay {
-
-    position:
-        absolute;
-
-    inset:
-        10px;
-
-    z-index:
-        3;
-
-    border-radius:
-        21px;
-
-    background:
-        linear-gradient(
-            180deg,
-            transparent 55%,
-            rgba(11,41,73,.24) 100%
-        );
-
-    pointer-events:
-        none;
-
-}
-
-
-/* =========================================================
-   18. RESEARCH ORBITS
-========================================================= */
-
-.research-orbit {
-
-    position:
-        absolute;
-
-    width:
-        480px;
-
-    height:
-        480px;
-
-    border:
-        1px solid
-        rgba(22,135,167,.11);
-
-    border-radius:
-        50%;
-
-    animation:
-        orbitRotate 35s
-        linear infinite;
-
-}
-
-
-.orbit-two {
-
-    width:
-        380px;
-
-    height:
-        380px;
-
-    border-color:
-        rgba(18,60,105,.09);
-
-    animation-duration:
-        27s;
-
-    animation-direction:
-        reverse;
-
-}
-
-
-.orbit-three {
-
-    width:
-        570px;
-
-    height:
-        570px;
-
-    border-color:
-        rgba(22,135,167,.065);
-
-    animation-duration:
-        45s;
-
-}
-
-
-@keyframes orbitRotate {
-
-    from {
-        transform: rotate(0deg);
+    <meta
+        name="theme-color"
+        content="#123c69"
+    >
+
+
+    <!-- =========================================================
+         OPEN GRAPH
+    ========================================================== -->
+
+    <meta
+        property="og:title"
+        content="Muhammad Sohail Akhtar | Mathematics × AI × Autonomous Systems"
+    >
+
+    <meta
+        property="og:description"
+        content="Academic profile of Muhammad Sohail Akhtar — mathematics educator, AI researcher and PhD Scholar in AI & Autonomous Systems."
+    >
+
+    <meta
+        property="og:type"
+        content="website"
+    >
+
+    <meta
+        property="og:image"
+        content="assets/images/profile.jpeg"
+    >
+
+
+    <!-- =========================================================
+         TITLE
+    ========================================================== -->
+
+    <title>
+        Muhammad Sohail Akhtar | Mathematics × AI × Autonomous Systems
+    </title>
+
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="assets/images/favicon.png"
+    >
+
+
+    <!-- =========================================================
+         GOOGLE FONTS
+    ========================================================== -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =========================================================
+         ICONS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+
+    <!-- =========================================================
+         SITE CSS
+    ========================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="assets/css/style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/navbar.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/profile.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/hero.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/cards.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/footer.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="assets/css/responsive.css"
+    >
+
+
+    <!-- =========================================================
+         STRUCTURED DATA
+    ========================================================== -->
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Muhammad Sohail Akhtar",
+        "jobTitle": "Mathematics Educator and AI Researcher",
+        "description": "Mathematics educator and researcher working at the intersection of mathematics, artificial intelligence, machine learning and autonomous systems.",
+        "url": "https://msohailakhtar.github.io/",
+        "sameAs": [
+            "https://www.linkedin.com/in/muhammad-sohail-akhtar"
+        ],
+        "knowsAbout": [
+            "Mathematics",
+            "Artificial Intelligence",
+            "Machine Learning",
+            "Deep Learning",
+            "Reinforcement Learning",
+            "Mathematical Optimization",
+            "Autonomous Systems",
+            "Data Science",
+            "Python",
+            "Computer Vision"
+        ]
     }
+    </script>
 
-    to {
-        transform: rotate(360deg);
-    }
-
-}
+</head>
 
 
-/* =========================================================
-   19. RESEARCH NODES
-========================================================= */
-
-.research-node {
-
-    position:
-        absolute;
-
-    z-index:
-        8;
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        9px;
-
-    padding:
-        10px 13px;
-
-    border:
-        1px solid
-        rgba(22,135,167,.17);
-
-    border-radius:
-        12px;
-
-    background:
-        rgba(255,255,255,.88);
-
-    box-shadow:
-        0 14px 35px
-        rgba(15,35,60,.09);
-
-    backdrop-filter:
-        blur(12px);
-
-    -webkit-backdrop-filter:
-        blur(12px);
-
-    animation:
-        nodeFloat 5s
-        ease-in-out infinite;
-
-}
+<body class="profile-page">
 
 
-.research-node small {
+<!-- =========================================================
+     PAGE LOADER
+========================================================== -->
 
-    display:
-        block;
+<div
+    class="page-loader"
+    id="pageLoader"
+    aria-label="Loading website"
+>
 
-    color:
-        var(--profile-text-muted);
+    <div class="loader-inner">
 
-    font-size:
-        8px;
+        <div class="loader-symbol">
+            ∑
+        </div>
 
-    letter-spacing:
-        .04em;
+        <div>
+            MUHAMMAD SOHAIL AKHTAR
+        </div>
 
-}
+        <div class="loader-line"></div>
 
+        <small>
+            MATHEMATICS · AI · AUTONOMOUS SYSTEMS
+        </small>
 
-.node-symbol {
+    </div>
 
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        18px;
-
-}
-
-
-.node-1 {
-
-    top:
-        12%;
-
-    left:
-        3%;
-
-}
+</div>
 
 
-.node-2 {
+<!-- =========================================================
+     AMBIENT BACKGROUND
+========================================================== -->
 
-    top:
-        23%;
+<div
+    class="ambient-background"
+    aria-hidden="true"
+>
 
-    right:
-        0;
+    <span class="math-float math-01">∑</span>
+    <span class="math-float math-02">∫</span>
+    <span class="math-float math-03">∇</span>
+    <span class="math-float math-04">λ</span>
+    <span class="math-float math-05">f(x)</span>
+    <span class="math-float math-06">∞</span>
+    <span class="math-float math-07">∂</span>
+    <span class="math-float math-08">ℝⁿ</span>
 
-    animation-delay:
-        -1.5s;
-
-}
-
-
-.node-3 {
-
-    bottom:
-        17%;
-
-    left:
-        4%;
-
-    animation-delay:
-        -3s;
-
-}
+</div>
 
 
-@keyframes nodeFloat {
+<!-- =========================================================
+     HEADER / NAVIGATION
+========================================================== -->
 
-    0%,
-    100% {
-        transform:
-            translateY(0);
-    }
+<header
+    class="profile-header"
+    id="profileHeader"
+>
 
-    50% {
-        transform:
-            translateY(-10px);
-    }
+    <nav
+        class="navbar"
+        aria-label="Primary navigation"
+    >
 
-}
+        <div class="navbar-container">
 
 
-/* =========================================================
-   20. HERO EQUATION
-========================================================= */
+            <!-- BRAND -->
 
-.hero-equation {
+            <a
+                href="#home"
+                class="navbar-logo"
+                aria-label="Muhammad Sohail Akhtar Home"
+            >
 
-    position:
-        absolute;
+                <span class="logo-symbol">
+                    MSA
+                </span>
 
-    right:
-        4%;
+                <span class="logo-text">
 
-    bottom:
-        4%;
+                    <span class="logo-main">
+                        MUHAMMAD SOHAIL AKHTAR
+                    </span>
 
-    color:
-        rgba(18,60,105,.25);
+                    <span class="logo-sub">
+                        MATHEMATICS · AI · AUTONOMOUS SYSTEMS
+                    </span>
 
-    font-family:
-        var(--font-display);
+                </span>
 
-    font-size:
-        clamp(
-            24px,
-            3vw,
-            42px
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <ul
+                class="nav-menu"
+                id="navMenu"
+            >
+
+                <li>
+                    <a
+                        href="#home"
+                        class="active"
+                    >
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#research">
+                        Research
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#teaching">
+                        Teaching
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#pmai-lab">
+                        PMAI Lab
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#writing">
+                        Writing
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <!-- MOBILE MENU -->
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="navMenu"
+            >
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================================================
+     MAIN
+========================================================== -->
+
+<main id="main-content">
+
+
+<!-- =========================================================
+     HERO
+========================================================== -->
+
+<section
+    class="profile-hero"
+    id="home"
+>
+
+    <div class="hero-grid">
+
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+
+
+            <div class="hero-status">
+
+                <span class="status-dot"></span>
+
+                PhD Scholar · AI & Autonomous Systems
+
+            </div>
+
+
+            <div class="hero-kicker">
+
+                MATHEMATICS × ARTIFICIAL INTELLIGENCE
+
+            </div>
+
+
+            <h1>
+
+                Muhammad
+                <span>
+                    Sohail Akhtar
+                </span>
+
+            </h1>
+
+
+            <p class="hero-lead">
+
+                I work at the intersection of
+                <strong>mathematics</strong>,
+                <strong>artificial intelligence</strong>,
+                <strong>machine learning</strong>,
+                and
+                <strong>autonomous decision-making</strong>.
+
+                My research direction explores how mathematical
+                structure can contribute to intelligent systems
+                that learn, reason, adapt, and operate in complex
+                and uncertain environments.
+
+            </p>
+
+
+            <!-- HERO ACTIONS -->
+
+            <div class="hero-actions">
+
+                <a
+                    href="#research"
+                    class="profile-btn profile-btn-primary"
+                >
+
+                    Explore Research
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+
+                <a
+                    href="#projects"
+                    class="profile-btn profile-btn-outline"
+                >
+
+                    Explore Projects
+
+                    <i class="fa-solid fa-code"></i>
+
+                </a>
+
+            </div>
+
+
+            <!-- HERO TAGS -->
+
+            <div class="hero-tags">
+
+                <span>
+                    Mathematics
+                </span>
+
+                <span>
+                    Machine Learning
+                </span>
+
+                <span>
+                    Deep Learning
+                </span>
+
+                <span>
+                    Optimization
+                </span>
+
+                <span>
+                    Reinforcement Learning
+                </span>
+
+                <span>
+                    Autonomous Systems
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- HERO VISUAL -->
+
+        <div class="hero-visual">
+
+
+            <div class="hero-photo-frame">
+
+                <img
+                    src="assets/images/profile.jpeg"
+                    alt="Muhammad Sohail Akhtar"
+                    class="hero-photo"
+                >
+
+                <div
+                    class="photo-overlay"
+                    aria-hidden="true"
+                ></div>
+
+                <div class="hero-photo-caption">
+
+                    <span>
+                        PhD Scholar
+                    </span>
+
+                    <small>
+                        AI & Autonomous Systems · NUST
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- RESEARCH ORBITS -->
+
+            <div
+                class="research-orbit orbit-one"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="research-orbit orbit-two"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="research-orbit orbit-three"
+                aria-hidden="true"
+            ></div>
+
+
+            <!-- RESEARCH NODES -->
+
+            <div class="research-node node-one">
+
+                <span class="node-symbol">
+                    ∇
+                </span>
+
+                <small>
+                    Optimization
+                </small>
+
+            </div>
+
+
+            <div class="research-node node-two">
+
+                <span class="node-symbol">
+                    λ
+                </span>
+
+                <small>
+                    Learning
+                </small>
+
+            </div>
+
+
+            <div class="research-node node-three">
+
+                <span class="node-symbol">
+                    AI
+                </span>
+
+                <small>
+                    Intelligence
+                </small>
+
+            </div>
+
+
+            <div class="hero-equation">
+
+                f : X → A
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <a
+        href="#about"
+        class="hero-scroll"
+    >
+
+        <span>
+            Scroll to explore
+        </span>
+
+        <i class="fa-solid fa-arrow-down"></i>
+
+    </a>
+
+</section>
+
+
+
+<!-- =========================================================
+     ABOUT
+========================================================== -->
+
+<section
+    class="profile-section about-section"
+    id="about"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro split-intro">
+
+            <div>
+
+                <div class="section-index">
+                    01 · About
+                </div>
+
+                <h2>
+
+                    Mathematics as a
+                    <em>language</em>
+                    for intelligent systems.
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                My academic work connects mathematical thinking
+                with computational methods to understand,
+                model, and build intelligent systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div class="about-main">
+
+                <p class="large-text">
+
+                    I am a mathematics educator and PhD Scholar
+                    in <strong>AI & Autonomous Systems</strong>
+                    at NUST, developing an academic direction
+                    that connects mathematical foundations,
+                    machine learning, optimization, and
+                    autonomous intelligence.
+
+                </p>
+
+
+                <p>
+
+                    My academic foundation is in mathematics,
+                    with an evolving research focus spanning
+                    computational mathematics, machine learning,
+                    data science, optimization, deep learning,
+                    reinforcement learning, and intelligent
+                    autonomous systems.
+
+                </p>
+
+
+                <p>
+
+                    I am particularly interested in understanding
+                    how mathematical structure can improve the
+                    reliability, interpretability, efficiency,
+                    and decision-making capabilities of intelligent
+                    systems.
+
+                </p>
+
+
+                <div class="about-quote">
+
+                    <span class="quote-mark">
+                        “
+                    </span>
+
+                    <blockquote>
+
+                        Build intelligent systems,
+                        but never lose the mathematics
+                        that makes intelligence understandable.
+
+                    </blockquote>
+
+                </div>
+
+            </div>
+
+
+            <!-- ACADEMIC FACTS -->
+
+            <div class="about-facts">
+
+
+                <article class="fact-card">
+
+                    <span>
+                        Current Academic Role
+                    </span>
+
+                    <strong>
+                        PhD Scholar
+                    </strong>
+
+                    <p>
+                        AI & Autonomous Systems
+                    </p>
+
+                </article>
+
+
+                <article class="fact-card">
+
+                    <span>
+                        Institution
+                    </span>
+
+                    <strong>
+                        NUST · SEECS
+                    </strong>
+
+                    <p>
+                        Islamabad, Pakistan
+                    </p>
+
+                </article>
+
+
+                <article class="fact-card">
+
+                    <span>
+                        Academic Foundation
+                    </span>
+
+                    <strong>
+                        M.Phil Mathematics
+                    </strong>
+
+                    <p>
+                        Quaid-i-Azam University
+                    </p>
+
+                </article>
+
+
+                <article class="fact-card">
+
+                    <span>
+                        Research Identity
+                    </span>
+
+                    <strong>
+                        Mathematical AI
+                    </strong>
+
+                    <p>
+                        Learning · Optimization · Autonomy
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESEARCH
+========================================================== -->
+
+<section
+    class="profile-section research-section"
+    id="research"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro">
+
+            <div class="section-index">
+                02 · Research
+            </div>
+
+            <h2>
+
+                From mathematical
+                <em>structure</em>
+                to intelligent behavior.
+
+            </h2>
+
+            <p>
+
+                My research interests explore mathematical
+                models, optimization, learning algorithms,
+                and computational approaches for intelligent
+                autonomous systems.
+
+            </p>
+
+        </div>
+
+
+        <!-- CURRENT RESEARCH -->
+
+        <div class="research-focus">
+
+            <div class="research-focus-header">
+                CURRENT RESEARCH DIRECTION
+            </div>
+
+            <h3>
+
+                Mathematically Grounded Reinforcement Learning
+                for Autonomous Decision-Making in Complex and
+                Uncertain Environments
+
+            </h3>
+
+
+            <p>
+
+                The central direction is to investigate how
+                mathematical modeling, optimization, and
+                reinforcement learning can be combined to
+                develop more principled approaches to
+                autonomous decision-making.
+
+            </p>
+
+
+            <div class="research-tags">
+
+                <span>
+                    Reinforcement Learning
+                </span>
+
+                <span>
+                    Mathematical Modeling
+                </span>
+
+                <span>
+                    Optimization
+                </span>
+
+                <span>
+                    Autonomous Systems
+                </span>
+
+                <span>
+                    Uncertainty
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- RESEARCH AREAS -->
+
+        <div class="research-grid">
+
+
+            <article class="research-card">
+
+                <span>
+                    01
+                </span>
+
+                <i class="fa-solid fa-square-root-variable"></i>
+
+                <h3>
+                    Mathematical AI
+                </h3>
+
+                <p>
+
+                    Mathematical foundations, models,
+                    structures, and reasoning for intelligent
+                    computational systems.
+
+                </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+                <span>
+                    02
+                </span>
+
+                <i class="fa-solid fa-brain"></i>
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <p>
+
+                    Learning algorithms, predictive modeling,
+                    neural networks, and computational
+                    intelligence.
+
+                </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+                <span>
+                    03
+                </span>
+
+                <i class="fa-solid fa-chart-line"></i>
+
+                <h3>
+                    Optimization
+                </h3>
+
+                <p>
+
+                    Mathematical optimization as a foundation
+                    for learning, estimation, control, and
+                    intelligent decision-making.
+
+                </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+                <span>
+                    04
+                </span>
+
+                <i class="fa-solid fa-robot"></i>
+
+                <h3>
+                    Autonomous Systems
+                </h3>
+
+                <p>
+
+                    Intelligent agents capable of learning,
+                    adapting, reasoning, and making decisions
+                    in dynamic environments.
+
+                </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+                <span>
+                    05
+                </span>
+
+                <i class="fa-solid fa-eye"></i>
+
+                <h3>
+                    Computer Vision
+                </h3>
+
+                <p>
+
+                    Vision-based intelligent systems,
+                    recognition, perception, and practical
+                    AI applications.
+
+                </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+                <span>
+                    06
+                </span>
+
+                <i class="fa-solid fa-database"></i>
+
+                <h3>
+                    Data Science
+                </h3>
+
+                <p>
+
+                    Data analysis, predictive modeling,
+                    visualization, business analytics,
+                    and computational methods.
+
+                </p>
+
+            </article>
+
+
+        </div>
+
+
+        <!-- RESEARCH PHILOSOPHY -->
+
+        <div class="research-philosophy">
+
+            <div class="philosophy-label">
+
+                <span>
+                    RESEARCH PHILOSOPHY
+                </span>
+
+            </div>
+
+            <div class="philosophy-statement">
+
+                Mathematics
+
+                <span>→</span>
+
+                Models
+
+                <span>→</span>
+
+                Learning
+
+                <span>→</span>
+
+                Intelligence
+
+                <span>→</span>
+
+                Autonomy
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PMAI LAB
+========================================================== -->
+
+<section
+    class="profile-section pmai-section"
+    id="pmai-lab"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro split-intro">
+
+            <div>
+
+                <div class="section-index">
+                    03 · PMAI Lab
+                </div>
+
+                <h2>
+
+                    Building a space where
+                    <em>mathematics meets AI.</em>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                PMAI Lab is a collaborative academic platform
+                connecting Python, mathematics, artificial
+                intelligence, teaching, research, projects,
+                and computational learning.
+
+            </p>
+
+        </div>
+
+
+        <div class="pmai-grid">
+
+
+            <div class="pmai-mark">
+
+                <span>
+                    PMAI
+                </span>
+
+                <small>
+                    LAB
+                </small>
+
+            </div>
+
+
+            <div class="pmai-introduction">
+
+                <p class="large-text">
+
+                    A collaborative academic ecosystem
+                    connecting
+                    <strong>Python</strong>,
+                    <strong>Mathematics</strong>,
+                    and
+                    <strong>Artificial Intelligence</strong>.
+
+                </p>
+
+
+                <p>
+
+                    PMAI Lab brings together structured
+                    educational resources, faculty contributions,
+                    student projects, computational experiments,
+                    research directions, and academic content.
+
+                </p>
+
+
+                <div class="pmai-action">
+
+                    <div>
+
+                        <span>
+                            ACADEMIC PLATFORM
+                        </span>
+
+                        <h3>
+                            Courses · Resources · Projects · Research
+                        </h3>
+
+                    </div>
+
+
+                    <a
+                        href="https://python-mathematics-ai-lab.github.io/"
+                        class="profile-btn profile-btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Visit PMAI Lab
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     PROJECTS
+========================================================== -->
+
+<section
+    class="profile-section projects-section"
+    id="projects"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro split-intro">
+
+            <div>
+
+                <div class="section-index">
+                    04 · Projects
+                </div>
+
+                <h2>
+
+                    Research becomes
+                    <em>systems.</em>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                I develop computational projects that transform
+                mathematical and AI concepts into practical
+                educational, research, data, and intelligent
+                systems.
+
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project-card project-featured">
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        AI · Academic Intelligence
+                    </span>
+
+                    <h3>
+                        AI Academic Assistant
+                    </h3>
+
+                    <p>
+
+                        An AI assistant concept designed to
+                        support academic workflows including
+                        web search, PDF understanding,
+                        spreadsheet analysis, DAX generation,
+                        Python development, machine learning,
+                        lecture notes, MCQs, and voice
+                        interaction.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>
+                            LLM
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            Data
+                        </span>
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+                    <a href="projects/index.html">
+
+                        Explore Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        Computer Vision
+                    </span>
+
+                    <h3>
+                        Face Recognition Student Management
+                    </h3>
+
+                    <p>
+
+                        A computer-vision based student management
+                        and attendance system integrating face
+                        recognition, student records, attendance
+                        workflows, and database management.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>
+                            Computer Vision
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            Database
+                        </span>
+
+                    </div>
+
+                    <a href="projects/index.html">
+
+                        Explore Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        AI · Business Automation
+                    </span>
+
+                    <h3>
+                        AI Shop Agent
+                    </h3>
+
+                    <p>
+
+                        An intelligent shop-agent concept connecting
+                        AI agents, business workflows, WhatsApp
+                        interaction, FastAPI services, and
+                        analytical dashboards.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>
+                            AI Agent
+                        </span>
+
+                        <span>
+                            FastAPI
+                        </span>
+
+                        <span>
+                            WhatsApp
+                        </span>
+
+                        <span>
+                            Power BI
+                        </span>
+
+                    </div>
+
+                    <a href="projects/index.html">
+
+                        Explore Project
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        Education · E-Learning
+                    </span>
+
+                    <h3>
+                        Sohail Academy
+                    </h3>
+
+                    <p>
+
+                        An educational platform connecting
+                        mathematics, Python programming,
+                        artificial intelligence, data science,
+                        and computational learning.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>
+                            Mathematics
+                        </span>
+
+                        <span>
+                            Python
+                        </span>
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="https://msohailakhtar.github.io/Sohail_Academy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Visit Academy
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 05 -->
+
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        Research · Machine Learning
+                    </span>
+
+                    <h3>
+                        Mathematical Machine Learning
+                    </h3>
+
+                    <p>
+
+                        Computational work exploring the connection
+                        between mathematical concepts, predictive
+                        models, optimization, neural networks,
+                        and machine learning algorithms.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>
+                            ML
+                        </span>
+
+                        <span>
+                            Mathematics
+                        </span>
+
+                        <span>
+                            Optimization
+                        </span>
+
+                    </div>
+
+                    <a href="projects/index.html">
+
+                        Explore Research Projects
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 06 -->
+
+            <article class="project-card">
+
+                <div class="project-content">
+
+                    <span class="project-type">
+                        Academic Infrastructure
+                    </span>
+
+                    <h3>
+                        PMAI Lab Academic Ecosystem
+                    </h3>
+
+                    <p>
+
+                        A collaborative infrastructure for courses,
+                        lectures, assignments, quizzes, resources,
+                        faculty contributions, projects, and
+                        research-oriented academic content.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>
+                            GitHub
+                        </span>
+
+                        <span>
+                            Education
+                        </span>
+
+                        <span>
+                            Research
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="https://python-mathematics-ai-lab.github.io/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        Visit PMAI Lab
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACADEMIC IMPACT
+========================================================== -->
+
+<section
+    class="profile-section impact-section"
+    id="impact"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro">
+
+            <div class="section-index">
+                05 · Academic Impact
+            </div>
+
+            <h2>
+
+                Teaching,
+                <em>building,</em>
+                and research.
+
+            </h2>
+
+            <p>
+
+                An academic profile shaped by university teaching,
+                computational projects, research development,
+                and collaborative educational initiatives.
+
+            </p>
+
+        </div>
+
+
+        <div class="impact-grid">
+
+
+            <article class="impact-card">
+
+                <strong>
+                    6+
+                </strong>
+
+                <span>
+                    Years
+                </span>
+
+                <p>
+                    University-level teaching and academic work
+                </p>
+
+            </article>
+
+
+            <article class="impact-card">
+
+                <strong>
+                    3
+                </strong>
+
+                <span>
+                    Core Domains
+                </span>
+
+                <p>
+                    Mathematics · Python · Artificial Intelligence
+                </p>
+
+            </article>
+
+
+            <article class="impact-card">
+
+                <strong>
+                    1
+                </strong>
+
+                <span>
+                    Research Direction
+                </span>
+
+                <p>
+                    Mathematically grounded autonomous intelligence
+                </p>
+
+            </article>
+
+
+            <article class="impact-card">
+
+                <strong>
+                    PMAI
+                </strong>
+
+                <span>
+                    Academic Lab
+                </span>
+
+                <p>
+                    Collaborative mathematics and AI ecosystem
+                </p>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     TEACHING
+========================================================== -->
+
+<section
+    class="profile-section teaching-section"
+    id="teaching"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro">
+
+            <div class="section-index">
+                06 · Teaching
+            </div>
+
+            <h2>
+
+                Teaching mathematics
+                for the <em>computational age.</em>
+
+            </h2>
+
+            <p>
+
+                My teaching combines mathematical foundations
+                with computational thinking, programming,
+                data analysis, and artificial intelligence.
+
+            </p>
+
+        </div>
+
+
+        <div class="teaching-grid">
+
+
+            <article class="teaching-card">
+
+                <span class="teaching-number">
+                    01
+                </span>
+
+                <i class="fa-solid fa-square-root-variable"></i>
+
+                <h3>
+                    Mathematics
+                </h3>
+
+                <p>
+
+                    Calculus, Linear Algebra, Discrete Structures,
+                    Multivariate Calculus, and mathematical
+                    foundations.
+
+                </p>
+
+                <div class="teaching-link">
+
+                    <a href="teaching/index.html">
+
+                        Explore Teaching
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="teaching-card">
+
+                <span class="teaching-number">
+                    02
+                </span>
+
+                <i class="fa-brands fa-python"></i>
+
+                <h3>
+                    Python & Programming
+                </h3>
+
+                <p>
+
+                    Python programming, scientific computing,
+                    automation, computational thinking,
+                    and programming for AI.
+
+                </p>
+
+                <div class="teaching-link">
+
+                    <a href="teaching/index.html">
+
+                        Explore Teaching
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="teaching-card">
+
+                <span class="teaching-number">
+                    03
+                </span>
+
+                <i class="fa-solid fa-chart-column"></i>
+
+                <h3>
+                    Data Science
+                </h3>
+
+                <p>
+
+                    Data analysis, machine learning,
+                    visualization, business analytics,
+                    Power BI, and Tableau.
+
+                </p>
+
+                <div class="teaching-link">
+
+                    <a href="teaching/index.html">
+
+                        Explore Teaching
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="teaching-card">
+
+                <span class="teaching-number">
+                    04
+                </span>
+
+                <i class="fa-solid fa-robot"></i>
+
+                <h3>
+                    Artificial Intelligence
+                </h3>
+
+                <p>
+
+                    Machine learning, neural networks,
+                    optimization, reinforcement learning,
+                    and intelligent systems.
+
+                </p>
+
+                <div class="teaching-link">
+
+                    <a href="teaching/index.html">
+
+                        Explore Teaching
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     CURRENTLY
+========================================================== -->
+
+<section
+    class="profile-section now-section"
+    id="now"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro">
+
+            <div class="section-index">
+                07 · Currently
+            </div>
+
+            <h2>
+
+                What I am
+                <em>working on now.</em>
+
+            </h2>
+
+        </div>
+
+
+        <div class="now-grid">
+
+
+            <div class="now-item">
+
+                <small>
+                    PhD Research
+                </small>
+
+                <h3>
+                    AI & Autonomous Systems
+                </h3>
+
+            </div>
+
+
+            <div class="now-item">
+
+                <small>
+                    Research Direction
+                </small>
+
+                <h3>
+                    Mathematically Grounded Reinforcement Learning
+                </h3>
+
+            </div>
+
+
+            <div class="now-item">
+
+                <small>
+                    Academic Platform
+                </small>
+
+                <h3>
+                    Building PMAI Lab
+                </h3>
+
+            </div>
+
+
+            <div class="now-item">
+
+                <small>
+                    Educational Work
+                </small>
+
+                <h3>
+                    Mathematics × Python × AI
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     ACADEMIC JOURNEY
+========================================================== -->
+
+<section
+    class="profile-section timeline-section"
+    id="academic-journey"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro">
+
+            <div class="section-index">
+                08 · Academic Journey
+            </div>
+
+            <h2>
+
+                A journey from
+                <em>mathematics</em>
+                to AI.
+
+            </h2>
+
+        </div>
+
+
+        <div class="academic-timeline">
+
+
+            <article class="timeline-entry">
+
+                <div class="timeline-year">
+                    2026
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        PhD
+                    </span>
+
+                    <h3>
+                        AI & Autonomous Systems
+                    </h3>
+
+                    <small>
+                        NUST · SEECS · Islamabad
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-entry">
+
+                <div class="timeline-year">
+                    2019
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        M.Phil
+                    </span>
+
+                    <h3>
+                        Mathematics
+                    </h3>
+
+                    <small>
+                        Quaid-i-Azam University
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-entry">
+
+                <div class="timeline-year">
+                    2019+
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        Teaching
+                    </span>
+
+                    <h3>
+                        Mathematics & Computational Learning
+                    </h3>
+
+                    <small>
+                        University-level teaching and academic development
+                    </small>
+
+                </div>
+
+            </article>
+
+
+            <article class="timeline-entry">
+
+                <div class="timeline-year">
+                    Present
+                </div>
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span>
+                        Research
+                    </span>
+
+                    <h3>
+                        Mathematics × AI × Autonomous Intelligence
+                    </h3>
+
+                    <small>
+                        Developing a mathematically grounded research direction
+                    </small>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     LEADERSHIP
+========================================================== -->
+
+<section
+    class="profile-section leadership-section"
+    id="leadership"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro">
+
+            <div class="section-index">
+                09 · Leadership
+            </div>
+
+            <h2>
+
+                Building academic
+                <em>communities.</em>
+
+            </h2>
+
+        </div>
+
+
+        <div class="leadership-card">
+
+
+            <div class="leadership-year">
+                2026
+            </div>
+
+
+            <div class="leadership-main">
+
+                <span>
+                    PMAI LAB
+                </span>
+
+                <h3>
+                    Founder & Academic Platform Lead
+                </h3>
+
+
+                <ul>
+
+                    <li>
+                        Developing a collaborative platform
+                        for mathematics, Python, and AI.
+                    </li>
+
+                    <li>
+                        Building structured course resources
+                        for faculty and students.
+                    </li>
+
+                    <li>
+                        Connecting teaching, projects,
+                        research, and computational learning.
+                    </li>
+
+                    <li>
+                        Supporting collaborative academic
+                        content and research development.
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="leadership-note">
+
+                <span>
+                    MISSION
+                </span>
+
+                <strong>
+
+                    Make high-quality mathematical and
+                    computational learning accessible.
+
+                </strong>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     WRITING
+========================================================== -->
+
+<section
+    class="profile-section writing-section"
+    id="writing"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro split-intro">
+
+            <div>
+
+                <div class="section-index">
+                    10 · Writing
+                </div>
+
+                <h2>
+
+                    Ideas,
+                    <em>explained.</em>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Notes and articles connecting mathematics,
+                programming, data science, machine learning,
+                and artificial intelligence.
+
+            </p>
+
+        </div>
+
+
+        <div class="writing-grid">
+
+
+            <article class="writing-card">
+
+                <div class="writing-meta">
+                    MATHEMATICS · AI
+                </div>
+
+                <h3>
+                    Why Mathematics Matters in Artificial Intelligence
+                </h3>
+
+                <p>
+
+                    Exploring the mathematical foundations
+                    behind modern intelligent systems.
+
+                </p>
+
+                <a href="blog/index.html">
+
+                    Read Articles
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <article class="writing-card">
+
+                <div class="writing-meta">
+                    PYTHON · DATA SCIENCE
+                </div>
+
+                <h3>
+                    Learning Python for AI and Data Science
+                </h3>
+
+                <p>
+
+                    Practical learning notes for students
+                    entering computational mathematics and AI.
+
+                </p>
+
+                <a href="blog/index.html">
+
+                    Read Articles
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+            <article class="writing-card">
+
+                <div class="writing-meta">
+                    RESEARCH · ML
+                </div>
+
+                <h3>
+                    From Optimization to Machine Learning
+                </h3>
+
+                <p>
+
+                    Understanding how mathematical optimization
+                    connects with modern learning algorithms.
+
+                </p>
+
+                <a href="blog/index.html">
+
+                    Read Articles
+
+                    <i class="fa-solid fa-arrow-right"></i>
+
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     YOUTUBE
+========================================================== -->
+
+<section
+    class="profile-section youtube-section"
+    id="youtube"
+>
+
+    <div class="profile-container">
+
+
+        <div class="youtube-grid">
+
+
+            <div class="youtube-copy">
+
+                <div class="section-index">
+                    11 · YouTube
+                </div>
+
+                <h2>
+
+                    Data Science
+                    <em>with Rao Sohail.</em>
+
+                </h2>
+
+                <p>
+
+                    Practical lessons connecting Python,
+                    mathematics, machine learning, data science,
+                    and artificial intelligence.
+
+                </p>
+
+
+                <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="profile-btn profile-btn-primary"
+                >
+
+                    Visit YouTube Channel
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+
+            <div class="youtube-visual">
+
+                <span class="youtube-equation">
+                    y = f(X)
+                </span>
+
+                <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="youtube-play"
+                    aria-label="Visit YouTube channel"
+                >
+
+                    <i class="fa-solid fa-play"></i>
+
+                </a>
+
+                <span class="youtube-label">
+                    PYTHON · MATHEMATICS · AI
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     RESOURCES
+========================================================== -->
+
+<section
+    class="profile-section resources-section"
+    id="resources"
+>
+
+    <div class="profile-container">
+
+
+        <div class="section-intro split-intro">
+
+            <div>
+
+                <div class="section-index">
+                    12 · Resources
+                </div>
+
+                <h2>
+
+                    Academic
+                    <em>resources.</em>
+
+                </h2>
+
+            </div>
+
+
+            <p>
+
+                Selected teaching materials, courses,
+                projects, notes, and computational learning
+                resources.
+
+            </p>
+
+        </div>
+
+
+        <div class="resource-links">
+
+
+            <a
+                href="courses/index.html"
+                class="resource-link"
+            >
+
+                <i class="fa-solid fa-book-open"></i>
+
+                <span>
+
+                    Courses
+
+                    <small>
+                        Mathematics · Python · AI
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="projects/index.html"
+                class="resource-link"
+            >
+
+                <i class="fa-solid fa-code"></i>
+
+                <span>
+
+                    Projects
+
+                    <small>
+                        Research & computational projects
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="notes/index.html"
+                class="resource-link"
+            >
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <span>
+
+                    Notes & Materials
+
+                    <small>
+                        Learning resources
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+            <a
+                href="blog/index.html"
+                class="resource-link"
+            >
+
+                <i class="fa-solid fa-pen-nib"></i>
+
+                <span>
+
+                    Blog
+
+                    <small>
+                        Ideas · explanations · research
+                    </small>
+
+                </span>
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================================================
+     COLLABORATION
+========================================================== -->
+
+<section
+    class="profile-section collaboration-section"
+    id="contact"
+>
+
+    <div class="profile-container">
+
+
+        <div class="collaboration-box">
+
+
+            <div class="collaboration-label">
+
+                <span>
+                    COLLABORATION
+                </span>
+
+            </div>
+
+
+            <div class="collaboration-main">
+
+                <h2>
+
+                    Interested in
+                    <em>working together?</em>
+
+                </h2>
+
+
+                <p>
+
+                    I am interested in academic collaboration,
+                    research discussions, mathematics and AI
+                    education, computational projects,
+                    interdisciplinary research, and
+                    intelligent systems.
+
+                </p>
+
+
+                <div class="collaboration-actions">
+
+
+                    <a
+                        href="mailto:msakhtar@math.qau.edu.pk"
+                        class="profile-btn profile-btn-primary"
+                    >
+
+                        Get in Touch
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                    </a>
+
+
+                    <a
+                        href="https://www.linkedin.com/in/muhammad-sohail-akhtar"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="profile-btn profile-btn-outline"
+                    >
+
+                        LinkedIn
+
+                        <i class="fa-brands fa-linkedin-in"></i>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+            <div class="collaboration-equation">
+
+                Mathematics + AI
+
+                <br>
+
+                →
+
+                <br>
+
+                Intelligent Systems
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
+<footer class="profile-footer">
+
+    <div class="profile-container">
+
+
+        <div class="footer-top">
+
+
+            <div class="footer-identity">
+
+                <div class="footer-mark">
+                    MSA
+                </div>
+
+                <div>
+
+                    <strong>
+                        Muhammad Sohail Akhtar
+                    </strong>
+
+                    <span>
+                        Mathematics · AI · Autonomous Systems
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#research">
+                    Research
+                </a>
+
+                <a href="#projects">
+                    Projects
+                </a>
+
+                <a href="#teaching">
+                    Teaching
+                </a>
+
+                <a href="#pmai-lab">
+                    PMAI Lab
+                </a>
+
+                <a href="#writing">
+                    Writing
+                </a>
+
+                <a href="#contact">
+                    Contact
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+
+                ©
+                <span id="currentYear">
+                    2026
+                </span>
+
+                Muhammad Sohail Akhtar.
+                All rights reserved.
+
+            </p>
+
+
+            <p>
+
+                Mathematics × Artificial Intelligence
+                × Autonomous Systems
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</footer>
+
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================== -->
+
+<button
+    class="back-to-top"
+    id="backToTop"
+    aria-label="Back to top"
+>
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================== -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* =====================================================
+           ELEMENTS
+        ====================================================== */
+
+        const header =
+            document.getElementById("profileHeader");
+
+        const menuToggle =
+            document.getElementById("menuToggle");
+
+        const navMenu =
+            document.getElementById("navMenu");
+
+        const backToTop =
+            document.getElementById("backToTop");
+
+        const pageLoader =
+            document.getElementById("pageLoader");
+
+        const currentYear =
+            document.getElementById("currentYear");
+
+
+        /* =====================================================
+           CURRENT YEAR
+        ====================================================== */
+
+        if (currentYear) {
+
+            currentYear.textContent =
+                new Date().getFullYear();
+
+        }
+
+
+        /* =====================================================
+           PAGE LOADER
+        ====================================================== */
+
+        window.addEventListener(
+            "load",
+            function () {
+
+                setTimeout(
+                    function () {
+
+                        if (pageLoader) {
+
+                            pageLoader.classList.add(
+                                "loaded"
+                            );
+
+                        }
+
+                    },
+                    500
+                );
+
+            }
         );
 
-    font-style:
-        italic;
 
-    pointer-events:
-        none;
+        /* =====================================================
+           HEADER SCROLL STATE
+        ====================================================== */
 
-}
+        function handleHeaderScroll() {
 
+            if (!header) return;
 
-/* =========================================================
-   21. HERO SCROLL
-========================================================= */
+            if (window.scrollY > 40) {
 
-.hero-scroll {
+                header.classList.add(
+                    "scrolled"
+                );
 
-    position:
-        absolute;
+            } else {
 
-    bottom:
-        28px;
+                header.classList.remove(
+                    "scrolled"
+                );
 
-    left:
-        50%;
+            }
 
-    display:
-        flex;
+        }
 
-    flex-direction:
-        column;
 
-    align-items:
-        center;
-
-    gap:
-        7px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-    letter-spacing:
-        .15em;
-
-    text-transform:
-        uppercase;
-
-    transform:
-        translateX(-50%);
-
-}
-
-
-.hero-scroll i {
-
-    color:
-        var(--profile-accent);
-
-    animation:
-        scrollBounce 2s
-        ease-in-out infinite;
-
-}
-
-
-@keyframes scrollBounce {
-
-    0%,
-    100% {
-        transform:
-            translateY(0);
-    }
-
-    50% {
-        transform:
-            translateY(5px);
-    }
-
-}
-
-
-/* =========================================================
-   22. IDENTITY STRIP
-========================================================= */
-
-.profile-page .identity-strip {
-
-    position:
-        relative;
-
-    border-top:
-        1px solid
-        var(--profile-border);
-
-    border-bottom:
-        1px solid
-        var(--profile-border);
-
-    background:
-        rgba(255,255,255,.72);
-
-    backdrop-filter:
-        blur(12px);
-
-}
-
-
-.profile-page .identity-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-}
-
-
-.profile-page .identity-item {
-
-    min-height:
-        105px;
-
-    padding:
-        22px 25px;
-
-    border-right:
-        1px solid
-        var(--profile-border);
-
-}
-
-
-.profile-page .identity-item:last-child {
-
-    border-right:
-        0;
-
-}
-
-
-.identity-number {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-}
-
-
-.identity-item strong {
-
-    color:
-        var(--profile-text-dark);
-
-}
-
-
-.identity-item small {
-
-    color:
-        var(--profile-text-muted);
-
-}
-
-
-/* =========================================================
-   23. PROFILE SECTIONS
-========================================================= */
-
-.profile-page .profile-section {
-
-    position:
-        relative;
-
-    padding:
-        120px 0;
-
-}
-
-
-/* Alternate section */
-
-.profile-page .section-soft {
-
-    background:
-        rgba(18,60,105,.012);
-
-}
-
-
-/* =========================================================
-   24. SECTION INTRO
-========================================================= */
-
-.profile-page .section-intro {
-
-    margin-bottom:
-        62px;
-
-}
-
-
-.profile-page .section-index {
-
-    color:
-        var(--profile-accent);
-
-}
-
-
-.profile-page .section-intro h2 {
-
-    color:
-        var(--profile-text-dark);
-
-}
-
-
-.profile-page .section-intro h2 em {
-
-    color:
-        var(--profile-primary);
-
-}
-
-
-/* =========================================================
-   25. ABOUT SECTION
-========================================================= */
-
-.about-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        minmax(0, 1.3fr)
-        minmax(300px, .7fr);
-
-    gap:
-        85px;
-
-    align-items:
-        start;
-
-}
-
-
-.about-main .large-text {
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        clamp(
-            27px,
-            3vw,
-            42px
+        window.addEventListener(
+            "scroll",
+            handleHeaderScroll,
+            { passive: true }
         );
 
-    line-height:
-        1.3;
+        handleHeaderScroll();
 
-    letter-spacing:
-        -.02em;
 
-}
+        /* =====================================================
+           MOBILE MENU
+        ====================================================== */
 
+        if (menuToggle && navMenu) {
 
-.about-main p {
 
-    margin-top:
-        24px;
+            menuToggle.addEventListener(
+                "click",
+                function () {
 
-    color:
-        var(--profile-text-soft);
+                    const expanded =
+                        menuToggle.getAttribute(
+                            "aria-expanded"
+                        ) === "true";
 
-    line-height:
-        1.85;
 
-}
+                    menuToggle.setAttribute(
+                        "aria-expanded",
+                        String(!expanded)
+                    );
 
 
-/* =========================================================
-   26. ABOUT QUOTE
-========================================================= */
+                    menuToggle.setAttribute(
+                        "aria-label",
+                        expanded
+                            ? "Open navigation menu"
+                            : "Close navigation menu"
+                    );
 
-.about-quote {
 
-    margin-top:
-        40px;
+                    navMenu.classList.toggle(
+                        "active"
+                    );
 
-    padding:
-        25px 30px;
-
-    border-left:
-        2px solid
-        var(--profile-accent);
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(22,135,167,.055),
-            transparent
-        );
-
-}
-
-
-.about-quote blockquote {
-
-    color:
-        var(--profile-text-soft);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        19px;
-
-    font-style:
-        italic;
-
-    line-height:
-        1.7;
-
-}
-
-
-.quote-mark {
-
-    display:
-        block;
-
-    margin-bottom:
-        4px;
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        Georgia,
-        serif;
-
-    font-size:
-        42px;
-
-    line-height:
-        .5;
-
-}
-
-
-/* =========================================================
-   27. FACT CARDS
-========================================================= */
-
-.about-facts {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap:
-        12px;
-
-}
-
-
-.fact-card {
-
-    min-height:
-        150px;
-
-    padding:
-        23px;
-
-    border-radius:
-        var(--profile-radius-md);
-
-}
-
-
-.fact-card span {
-
-    display:
-        block;
-
-    margin-bottom:
-        10px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .12em;
-
-}
-
-
-.fact-card strong {
-
-    display:
-        block;
-
-    color:
-        var(--profile-text-dark);
-
-    font-size:
-        16px;
-
-    line-height:
-        1.4;
-
-}
-
-
-.fact-card p {
-
-    margin-top:
-        7px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        11px;
-
-}
-
-
-/* =========================================================
-   28. RESEARCH FOCUS
-========================================================= */
-
-.research-focus {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    padding:
-        55px;
-
-    border:
-        1px solid
-        rgba(22,135,167,.15);
-
-    border-radius:
-        var(--profile-radius-lg);
-
-    background:
-
-        linear-gradient(
-            135deg,
-            rgba(22,135,167,.055),
-            rgba(18,60,105,.025),
-            rgba(255,255,255,.85)
-        );
-
-    box-shadow:
-        var(--profile-shadow-sm);
-
-}
-
-
-.research-focus-header {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-    font-weight:
-        600;
-
-    letter-spacing:
-        .15em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.research-focus h3 {
-
-    max-width:
-        900px;
-
-    margin-top:
-        15px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        clamp(
-            27px,
-            3vw,
-            42px
-        );
-
-    line-height:
-        1.2;
-
-}
-
-
-.research-tags {
-
-    display:
-        flex;
-
-    flex-wrap:
-        wrap;
-
-    gap:
-        8px;
-
-    margin-top:
-        25px;
-
-}
-
-
-.research-tags span {
-
-    padding:
-        8px 12px;
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        999px;
-
-    background:
-        rgba(255,255,255,.75);
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        10px;
-
-}
-
-
-/* =========================================================
-   29. RESEARCH CARDS
-========================================================= */
-
-.research-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        18px;
-
-    margin-top:
-        28px;
-
-}
-
-
-.research-card {
-
-    min-height:
-        300px;
-
-    padding:
-        28px;
-
-    border-radius:
-        var(--profile-radius-md);
-
-}
-
-
-.research-number {
-
-    color:
-        var(--profile-text-light);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-}
-
-
-.research-icon {
-
-    width:
-        48px;
-
-    height:
-        48px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    margin:
-        35px 0 22px;
-
-    border:
-        1px solid
-        rgba(22,135,167,.18);
-
-    border-radius:
-        12px;
-
-    background:
-        rgba(22,135,167,.04);
-
-    color:
-        var(--profile-accent);
-
-    font-size:
-        18px;
-
-}
-
-
-.research-card h3 {
-
-    color:
-        var(--profile-text-dark);
-
-    font-size:
-        18px;
-
-    line-height:
-        1.35;
-
-}
-
-
-.research-card p {
-
-    margin-top:
-        12px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        13px;
-
-    line-height:
-        1.75;
-
-}
-
-
-/* =========================================================
-   30. RESEARCH PHILOSOPHY
-========================================================= */
-
-.research-philosophy {
-
-    margin-top:
-        70px;
-
-    padding:
-        65px 30px;
-
-    border-top:
-        1px solid
-        var(--profile-border);
-
-    border-bottom:
-        1px solid
-        var(--profile-border);
-
-    text-align:
-        center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(22,135,167,.045),
-            transparent 60%
-        );
-
-}
-
-
-.philosophy-label span {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-    letter-spacing:
-        .15em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.philosophy-statement {
-
-    max-width:
-        920px;
-
-    margin:
-        20px auto 0;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        clamp(
-            28px,
-            4vw,
-            52px
-        );
-
-    line-height:
-        1.2;
-
-}
-
-
-.philosophy-statement span {
-
-    color:
-        var(--profile-accent);
-
-}
-
-
-.philosophy-statement strong {
-
-    color:
-        var(--profile-primary);
-
-}
-
-
-/* =========================================================
-   31. PROJECTS
-========================================================= */
-
-.projects-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    gap:
-        18px;
-
-}
-
-
-.project-card {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    border-radius:
-        var(--profile-radius-md);
-
-}
-
-
-.project-card-top {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        space-between;
-
-    padding:
-        20px 22px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-}
-
-
-.project-visual {
-
-    position:
-        relative;
-
-    min-height:
-        190px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(22,135,167,.065),
-            transparent 60%
-        );
-
-}
-
-
-.project-symbol {
-
-    color:
-        rgba(18,60,105,.55);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        72px;
-
-    transition:
-        var(--profile-transition);
-
-}
-
-
-.project-card:hover .project-symbol {
-
-    color:
-        var(--profile-accent);
-
-    transform:
-        scale(1.05);
-
-}
-
-
-.project-content {
-
-    padding:
-        26px;
-
-    border-top:
-        1px solid
-        var(--profile-border);
-
-}
-
-
-.project-type {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-    letter-spacing:
-        .12em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.project-content h3 {
-
-    margin-top:
-        8px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        23px;
-
-}
-
-
-.project-content p {
-
-    margin-top:
-        10px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        13px;
-
-    line-height:
-        1.75;
-
-}
-
-
-/* =========================================================
-   32. TEACHING
-========================================================= */
-
-.teaching-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        18px;
-
-}
-
-
-.teaching-card {
-
-    min-height:
-        250px;
-
-    padding:
-        28px;
-
-    border-radius:
-        var(--profile-radius-md);
-
-}
-
-
-.teaching-number {
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-}
-
-
-.teaching-card > i {
-
-    display:
-        block;
-
-    margin:
-        35px 0 20px;
-
-    color:
-        var(--profile-accent);
-
-    font-size:
-        22px;
-
-}
-
-
-.teaching-card h3 {
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        21px;
-
-}
-
-
-.teaching-card p {
-
-    margin-top:
-        9px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        12px;
-
-    line-height:
-        1.7;
-
-}
-
-
-/* =========================================================
-   33. NOW SECTION
-========================================================= */
-
-.now-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        var(--profile-radius-md);
-
-    overflow:
-        hidden;
-
-}
-
-
-.now-item {
-
-    min-height:
-        220px;
-
-    padding:
-        30px;
-
-    border:
-        0;
-
-    border-right:
-        1px solid
-        var(--profile-border);
-
-}
-
-
-.now-item:last-child {
-
-    border-right:
-        0;
-
-}
-
-
-.now-item > span {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-}
-
-
-.now-item small {
-
-    display:
-        block;
-
-    margin-top:
-        30px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-    text-transform:
-        uppercase;
-
-    letter-spacing:
-        .1em;
-
-}
-
-
-.now-item h3 {
-
-    margin-top:
-        8px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        22px;
-
-}
-
-
-/* =========================================================
-   34. WRITING / BLOG
-========================================================= */
-
-.writing-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        18px;
-
-}
-
-
-.writing-card {
-
-    min-height:
-        250px;
-
-    padding:
-        28px;
-
-    border-radius:
-        var(--profile-radius-md);
-
-}
-
-
-.writing-meta {
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-    letter-spacing:
-        .08em;
-
-}
-
-
-.writing-card h3 {
-
-    margin-top:
-        30px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        22px;
-
-    line-height:
-        1.3;
-
-}
-
-
-.writing-card p {
-
-    margin-top:
-        12px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        12px;
-
-}
-
-
-.writing-card a {
-
-    display:
-        inline-flex;
-
-    margin-top:
-        20px;
-
-    color:
-        var(--profile-primary);
-
-    font-size:
-        11px;
-
-}
-
-
-/* =========================================================
-   35. YOUTUBE
-========================================================= */
-
-.youtube-section {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        var(--profile-radius-lg);
-
-    background:
-        radial-gradient(
-            circle at 75% 50%,
-            rgba(220,38,38,.035),
-            transparent 35%
-        );
-
-}
-
-
-.youtube-section .profile-container {
-
-    padding:
-        70px 0;
-
-}
-
-
-.youtube-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    align-items:
-        center;
-
-    gap:
-        70px;
-
-}
-
-
-.youtube-copy h2 {
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        clamp(
-            32px,
-            4vw,
-            55px
-        );
-
-    line-height:
-        1.08;
-
-}
-
-
-.youtube-copy p {
-
-    max-width:
-        570px;
-
-    margin-top:
-        20px;
-
-    color:
-        var(--profile-text-soft);
-
-}
-
-
-.youtube-visual {
-
-    position:
-        relative;
-
-    min-height:
-        320px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        var(--profile-radius-lg);
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(220,38,38,.055),
-            transparent 60%
-        );
-
-}
-
-
-.youtube-play {
-
-    position:
-        relative;
-
-    z-index:
-        3;
-
-    width:
-        82px;
-
-    height:
-        58px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    border-radius:
-        17px;
-
-    background:
-        #172033;
-
-    color:
-        #ffffff;
-
-    box-shadow:
-        0 20px 50px
-        rgba(15,35,60,.18);
-
-    transition:
-        var(--profile-transition);
-
-}
-
-
-.youtube-play:hover {
-
-    transform:
-        scale(1.08);
-
-}
-
-
-.youtube-equation {
-
-    position:
-        absolute;
-
-    top:
-        25px;
-
-    right:
-        30px;
-
-    color:
-        rgba(18,60,105,.25);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        25px;
-
-}
-
-
-/* =========================================================
-   36. ACADEMIC TIMELINE
-========================================================= */
-
-.academic-timeline {
-
-    position:
-        relative;
-
-}
-
-
-.academic-timeline::before {
-
-    content:
-        "";
-
-    position:
-        absolute;
-
-    top:
-        0;
-
-    bottom:
-        0;
-
-    left:
-        50%;
-
-    width:
-        1px;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent,
-            var(--profile-border-blue),
-            transparent
-        );
-
-}
-
-
-.timeline-entry {
-
-    position:
-        relative;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    min-height:
-        170px;
-
-    border-bottom:
-        1px solid
-        var(--profile-border);
-
-}
-
-
-.timeline-year {
-
-    padding:
-        35px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        11px;
-
-}
-
-
-.timeline-content {
-
-    padding:
-        35px;
-
-}
-
-
-.timeline-marker {
-
-    position:
-        absolute;
-
-    top:
-        39px;
-
-    left:
-        50%;
-
-    width:
-        11px;
-
-    height:
-        11px;
-
-    border:
-        2px solid
-        var(--profile-accent);
-
-    border-radius:
-        50%;
-
-    background:
-        #ffffff;
-
-    transform:
-        translateX(-50%);
-
-}
-
-
-.timeline-content span {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        9px;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.timeline-content h3 {
-
-    margin-top:
-        7px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        22px;
-
-}
-
-
-.timeline-content small {
-
-    display:
-        block;
-
-    margin-top:
-        7px;
-
-    color:
-        var(--profile-text-muted);
-
-}
-
-
-/* =========================================================
-   37. LEADERSHIP
-========================================================= */
-
-.leadership-card {
-
-    padding:
-        35px;
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        var(--profile-radius-md);
-
-    background:
-        rgba(255,255,255,.88);
-
-    box-shadow:
-        var(--profile-shadow-xs);
-
-}
-
-
-.leadership-year {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-}
-
-
-.leadership-main h3 {
-
-    margin-top:
-        8px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        25px;
-
-}
-
-
-.leadership-main li {
-
-    margin-top:
-        8px;
-
-    color:
-        var(--profile-text-soft);
-
-    font-size:
-        13px;
-
-}
-
-
-/* =========================================================
-   38. RESOURCES
-========================================================= */
-
-.resource-links {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(2, 1fr);
-
-    border:
-        1px solid
-        var(--profile-border);
-
-    border-radius:
-        var(--profile-radius-md);
-
-    overflow:
-        hidden;
-
-}
-
-
-.resource-link {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    gap:
-        15px;
-
-    min-height:
-        90px;
-
-    padding:
-        20px 24px;
-
-    border-right:
-        1px solid
-        var(--profile-border);
-
-    border-bottom:
-        1px solid
-        var(--profile-border);
-
-    color:
-        var(--profile-text-dark);
-
-    transition:
-        var(--profile-transition);
-
-}
-
-
-.resource-link:hover {
-
-    background:
-        var(--profile-accent-soft);
-
-    color:
-        var(--profile-accent);
-
-}
-
-
-.resource-link i {
-
-    color:
-        var(--profile-accent);
-
-    font-size:
-        17px;
-
-}
-
-
-.resource-link small {
-
-    display:
-        block;
-
-    margin-top:
-        3px;
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        10px;
-
-}
-
-
-/* =========================================================
-   39. COLLABORATION
-========================================================= */
-
-.collaboration-box {
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-    padding:
-        70px;
-
-    border:
-        1px solid
-        rgba(22,135,167,.15);
-
-    border-radius:
-        var(--profile-radius-xl);
-
-    background:
-
-        radial-gradient(
-            circle at 75% 30%,
-            rgba(22,135,167,.055),
-            transparent 40%
-        ),
-
-        #ffffff;
-
-    box-shadow:
-        var(--profile-shadow-md);
-
-}
-
-
-.collaboration-label span {
-
-    color:
-        var(--profile-accent);
-
-    font-family:
-        var(--font-mono);
-
-    font-size:
-        10px;
-
-    letter-spacing:
-        .15em;
-
-    text-transform:
-        uppercase;
-
-}
-
-
-.collaboration-main h2 {
-
-    max-width:
-        760px;
-
-    margin-top:
-        15px;
-
-    color:
-        var(--profile-text-dark);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        clamp(
-            34px,
-            5vw,
-            62px
-        );
-
-    line-height:
-        1.08;
-
-}
-
-
-.collaboration-equation {
-
-    position:
-        absolute;
-
-    right:
-        50px;
-
-    bottom:
-        35px;
-
-    color:
-        rgba(22,135,167,.16);
-
-    font-family:
-        var(--font-display);
-
-    font-size:
-        50px;
-
-}
-
-
-/* =========================================================
-   40. FOOTER
-========================================================= */
-
-.profile-footer {
-
-    margin-top:
-        0;
-
-    background:
-        #eef3f7;
-
-    border-top:
-        1px solid
-        var(--profile-border);
-
-}
-
-
-.profile-footer .footer-top {
-
-    padding:
-        60px 0;
-
-    border-bottom:
-        1px solid
-        var(--profile-border);
-
-}
-
-
-.footer-mark {
-
-    width:
-        46px;
-
-    height:
-        46px;
-
-    display:
-        grid;
-
-    place-items:
-        center;
-
-    border:
-        1px solid
-        rgba(18,60,105,.2);
-
-    border-radius:
-        10px;
-
-    color:
-        var(--profile-primary);
-
-    font-family:
-        var(--font-display);
-
-}
-
-
-.footer-identity strong {
-
-    color:
-        var(--profile-text-dark);
-
-}
-
-
-.footer-identity span {
-
-    color:
-        var(--profile-text-muted);
-
-}
-
-
-.footer-links a {
-
-    color:
-        var(--profile-text-muted);
-
-    transition:
-        color var(--profile-transition);
-
-}
-
-
-.footer-links a:hover {
-
-    color:
-        var(--profile-accent);
-
-}
-
-
-.footer-bottom {
-
-    padding:
-        22px 0;
-
-}
-
-
-.footer-bottom p {
-
-    color:
-        var(--profile-text-muted);
-
-    font-size:
-        11px;
-
-}
-
-
-/* =========================================================
-   41. BACK TO TOP
-========================================================= */
-
-.profile-page .back-to-top {
-
-    width:
-        48px;
-
-    height:
-        48px;
-
-    border:
-        1px solid
-        var(--profile-border-blue);
-
-    background:
-        rgba(255,255,255,.94);
-
-    color:
-        var(--profile-primary);
-
-    box-shadow:
-        var(--profile-shadow-sm);
-
-    backdrop-filter:
-        blur(12px);
-
-}
-
-
-.profile-page .back-to-top:hover {
-
-    background:
-        var(--profile-primary);
-
-    color:
-        #ffffff;
-
-}
-
-
-/* =========================================================
-   42. REVEAL ANIMATION
-========================================================= */
-
-.profile-page .reveal-element {
-
-    opacity:
-        0;
-
-    transform:
-        translateY(28px);
-
-    transition:
-        opacity 700ms ease,
-        transform 700ms
-        cubic-bezier(.2,.65,.3,1);
-
-}
-
-
-.profile-page .reveal-element.is-visible {
-
-    opacity:
-        1;
-
-    transform:
-        translateY(0);
-
-}
-
-
-/* =========================================================
-   43. STAGGER ANIMATIONS
-========================================================= */
-
-.profile-page .reveal-element:nth-child(2) {
-
-    transition-delay:
-        80ms;
-
-}
-
-
-.profile-page .reveal-element:nth-child(3) {
-
-    transition-delay:
-        160ms;
-
-}
-
-
-.profile-page .reveal-element:nth-child(4) {
-
-    transition-delay:
-        240ms;
-
-}
-
-
-/* =========================================================
-   44. TABLET
-========================================================= */
-
-@media (max-width: 1100px) {
-
-    .profile-hero .hero-grid {
-
-        grid-template-columns:
-            minmax(0, 1fr)
-            minmax(330px, .8fr);
-
-        gap:
-            40px;
-
-    }
-
-
-    .hero-photo-frame {
-
-        width:
-            330px;
-
-    }
-
-
-    .research-grid,
-    .teaching-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-
-    .writing-grid {
-
-        grid-template-columns:
-            repeat(2,1fr);
-
-    }
-
-}
-
-
-/* =========================================================
-   45. TABLET / SMALL LAPTOP
-========================================================= */
-
-@media (max-width: 900px) {
-
-    .profile-hero {
-
-        min-height:
-            auto;
-
-        padding:
-            130px 0 90px;
-
-    }
-
-
-    .profile-hero .hero-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .hero-content {
-
-        max-width:
-            750px;
-
-    }
-
-
-    .hero-visual {
-
-        min-height:
-            500px;
-
-    }
-
-
-    .about-grid {
-
-        grid-template-columns:
-            1fr;
-
-        gap:
-            45px;
-
-    }
-
-
-    .youtube-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .timeline-entry {
-
-        grid-template-columns:
-            140px 1fr;
-
-    }
-
-
-    .academic-timeline::before {
-
-        left:
-            140px;
-
-    }
-
-
-    .timeline-marker {
-
-        left:
-            140px;
-
-    }
-
-}
-
-
-/* =========================================================
-   46. MOBILE
-========================================================= */
-
-@media (max-width: 700px) {
-
-    .profile-page .profile-container,
-    .profile-hero .hero-grid {
-
-        width:
-            calc(100% - 32px);
-
-    }
-
-
-    .profile-page .profile-section {
-
-        padding:
-            78px 0;
-
-    }
-
-
-    .profile-hero {
-
-        padding:
-            115px 0 75px;
-
-    }
-
-
-    .profile-hero h1 {
-
-        font-size:
-            clamp(
-                45px,
-                13vw,
-                65px
+                }
             );
 
-    }
+
+            /* CLOSE AFTER CLICK */
+
+            navMenu
+                .querySelectorAll("a")
+                .forEach(
+                    function (link) {
+
+                        link.addEventListener(
+                            "click",
+                            function () {
+
+                                menuToggle.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+                                menuToggle.setAttribute(
+                                    "aria-label",
+                                    "Open navigation menu"
+                                );
+
+                                navMenu.classList.remove(
+                                    "active"
+                                );
+
+                            }
+                        );
+
+                    }
+                );
 
 
-    .hero-lead {
+            /* CLOSE OUTSIDE */
 
-        font-size:
-            15px;
+            document.addEventListener(
+                "click",
+                function (event) {
 
-    }
+                    if (
+                        !navMenu.contains(
+                            event.target
+                        ) &&
+                        !menuToggle.contains(
+                            event.target
+                        )
+                    ) {
 
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-    .hero-actions {
+                        menuToggle.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
 
-        flex-direction:
-            column;
+                        navMenu.classList.remove(
+                            "active"
+                        );
 
-        align-items:
-            stretch;
+                    }
 
-    }
-
-
-    .profile-btn {
-
-        width:
-            100%;
-
-    }
-
-
-    .hero-visual {
-
-        min-height:
-            420px;
-
-        margin-top:
-            10px;
-
-    }
-
-
-    .hero-photo-frame {
-
-        width:
-            min(
-                300px,
-                75vw
+                }
             );
 
-    }
+        }
 
 
-    .research-orbit {
+        /* =====================================================
+           BACK TO TOP
+        ====================================================== */
 
-        width:
-            350px;
+        function handleBackToTop() {
 
-        height:
-            350px;
+            if (!backToTop) return;
 
-    }
+            if (window.scrollY > 700) {
 
+                backToTop.classList.add(
+                    "visible"
+                );
 
-    .orbit-two {
+            } else {
 
-        width:
-            285px;
+                backToTop.classList.remove(
+                    "visible"
+                );
 
-        height:
-            285px;
+            }
 
-    }
+        }
 
 
-    .orbit-three {
+        window.addEventListener(
+            "scroll",
+            handleBackToTop,
+            { passive: true }
+        );
 
-        width:
-            410px;
+        handleBackToTop();
 
-        height:
-            410px;
 
-    }
+        if (backToTop) {
 
+            backToTop.addEventListener(
+                "click",
+                function () {
 
-    .research-node {
+                    window.scrollTo({
 
-        transform:
-            scale(.85);
+                        top: 0,
 
-    }
+                        behavior: "smooth"
 
+                    });
 
-    .research-grid,
-    .projects-grid,
-    .teaching-grid,
-    .writing-grid {
+                }
+            );
 
-        grid-template-columns:
-            1fr;
+        }
 
-    }
 
+        /* =====================================================
+           ACTIVE NAVIGATION
+        ====================================================== */
 
-    .about-facts {
+        const sections =
+            document.querySelectorAll(
+                "main section[id]"
+            );
 
-        grid-template-columns:
-            1fr;
+        const navLinks =
+            document.querySelectorAll(
+                ".nav-menu a"
+            );
 
-    }
 
+        function updateActiveNavigation() {
 
-    .research-focus {
+            let currentSection =
+                "home";
 
-        padding:
-            32px 25px;
 
-    }
+            sections.forEach(
+                function (section) {
 
+                    const sectionTop =
+                        section.offsetTop - 160;
 
-    .now-grid {
 
-        grid-template-columns:
-            1fr;
+                    if (
+                        window.scrollY >=
+                        sectionTop
+                    ) {
 
-    }
+                        currentSection =
+                            section.getAttribute(
+                                "id"
+                            );
 
+                    }
 
-    .now-item {
+                }
+            );
 
-        min-height:
-            170px;
 
-        border-right:
-            0;
+            navLinks.forEach(
+                function (link) {
 
-        border-bottom:
-            1px solid
-            var(--profile-border);
+                    link.classList.remove(
+                        "active"
+                    );
 
-    }
 
+                    const href =
+                        link.getAttribute(
+                            "href"
+                        );
 
-    .now-item:last-child {
 
-        border-bottom:
-            0;
+                    if (
+                        href ===
+                        "#" + currentSection
+                    ) {
 
-    }
+                        link.classList.add(
+                            "active"
+                        );
 
+                    }
 
-    .resource-links {
+                }
+            );
 
-        grid-template-columns:
-            1fr;
+        }
 
-    }
 
+        window.addEventListener(
+            "scroll",
+            updateActiveNavigation,
+            { passive: true }
+        );
 
-    .resource-link {
+        updateActiveNavigation();
 
-        border-right:
-            0;
 
-    }
+        /* =====================================================
+           REVEAL ANIMATIONS
+        ====================================================== */
 
+        const revealElements =
+            document.querySelectorAll(
 
-    .youtube-section .profile-container {
+                ".research-card, " +
+                ".project-card, " +
+                ".teaching-card, " +
+                ".writing-card, " +
+                ".fact-card, " +
+                ".now-item, " +
+                ".timeline-entry, " +
+                ".leadership-card, " +
+                ".resource-link, " +
+                ".impact-card"
 
-        padding:
-            45px 0;
+            );
 
-    }
 
+        if (
+            "IntersectionObserver"
+            in window
+        ) {
 
-    .youtube-visual {
 
-        min-height:
-            250px;
+            const revealObserver =
+                new IntersectionObserver(
 
-    }
+                    function (
+                        entries,
+                        observer
+                    ) {
 
 
-    .collaboration-box {
+                        entries.forEach(
+                            function (entry) {
 
-        padding:
-            40px 25px;
+                                if (
+                                    entry.isIntersecting
+                                ) {
 
-    }
 
+                                    entry.target.classList.add(
+                                        "is-visible"
+                                    );
 
-    .collaboration-equation {
 
-        right:
-            20px;
+                                    observer.unobserve(
+                                        entry.target
+                                    );
 
-        bottom:
-            20px;
+                                }
 
-        font-size:
-            30px;
+                            }
+                        );
 
-    }
+                    },
 
+                    {
+                        threshold: 0.12
+                    }
 
-    .academic-timeline::before {
+                );
 
-        left:
-            9px;
 
-    }
+            revealElements.forEach(
+                function (element) {
 
+                    element.classList.add(
+                        "reveal-element"
+                    );
 
-    .timeline-entry {
+                    revealObserver.observe(
+                        element
+                    );
 
-        display:
-            block;
+                }
+            );
 
-        padding-left:
-            35px;
 
-    }
+        } else {
 
 
-    .timeline-year {
+            revealElements.forEach(
+                function (element) {
 
-        padding:
-            25px 0 5px;
+                    element.classList.add(
+                        "is-visible"
+                    );
 
-    }
+                }
+            );
 
+        }
 
-    .timeline-content {
 
-        padding:
-            10px 0 30px;
+        /* =====================================================
+           ESCAPE KEY
+        ====================================================== */
 
-    }
+        document.addEventListener(
+            "keydown",
+            function (event) {
 
+                if (
+                    event.key === "Escape" &&
+                    navMenu
+                ) {
 
-    .timeline-marker {
+                    navMenu.classList.remove(
+                        "active"
+                    );
 
-        left:
-            9px;
 
-        top:
-            31px;
+                    if (menuToggle) {
 
-    }
+                        menuToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
 
-}
+                        menuToggle.setAttribute(
+                            "aria-label",
+                            "Open navigation menu"
+                        );
 
+                    }
 
-/* =========================================================
-   47. SMALL MOBILE
-========================================================= */
+                }
 
-@media (max-width: 480px) {
+            }
+        );
 
-    .profile-page .profile-container,
-    .profile-hero .hero-grid {
-
-        width:
-            calc(100% - 24px);
-
-    }
-
-
-    .profile-hero h1 {
-
-        font-size:
-            43px;
-
-    }
-
-
-    .hero-status {
-
-        font-size:
-            8px;
-
-    }
-
-
-    .hero-tags span {
-
-        font-size:
-            9px;
-
-    }
-
-
-    .hero-photo-frame {
-
-        width:
-            270px;
-
-    }
-
-
-    .hero-visual {
-
-        min-height:
-            370px;
-
-    }
-
-
-    .research-node {
-
-        display:
-            none;
-
-    }
-
-
-    .research-focus h3 {
-
-        font-size:
-            27px;
-
-    }
-
-
-    .collaboration-main h2 {
-
-        font-size:
-            36px;
 
     }
+);
 
-}
+</script>
 
 
-/* =========================================================
-   48. REDUCED MOTION
-========================================================= */
+</body>
 
-@media (prefers-reduced-motion: reduce) {
-
-    .profile-page *,
-    .profile-page *::before,
-    .profile-page *::after {
-
-        animation-duration:
-            .01ms !important;
-
-        animation-iteration-count:
-            1 !important;
-
-        transition-duration:
-            .01ms !important;
-
-    }
-
-}
+</html>
+```
