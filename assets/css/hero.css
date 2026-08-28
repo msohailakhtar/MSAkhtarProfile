@@ -1,0 +1,1138 @@
+/* =========================================================
+   MUHAMMAD SOHAIL AKHTAR
+   HERO SECTION — INTERNATIONAL ACADEMIC PROFILE
+   Mathematics • AI • Autonomous Systems
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   HERO VARIABLES
+   --------------------------------------------------------- */
+
+:root {
+    --hero-bg: #f7fbff;
+    --hero-surface: #ffffff;
+    --hero-primary: #0b5ed7;
+    --hero-primary-dark: #073b8f;
+    --hero-secondary: #00a6a6;
+    --hero-accent: #6c63ff;
+    --hero-text: #10233f;
+    --hero-muted: #5d6b82;
+    --hero-border: rgba(11, 94, 215, 0.12);
+    --hero-shadow: 0 25px 70px rgba(15, 54, 92, 0.12);
+}
+
+
+/* ---------------------------------------------------------
+   HERO MAIN
+   --------------------------------------------------------- */
+
+.profile-hero {
+    position: relative;
+    min-height: calc(100vh - 80px);
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(11, 94, 215, 0.10),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 10% 85%,
+            rgba(0, 166, 166, 0.08),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f7fbff 50%,
+            #eef7ff 100%
+        );
+}
+
+
+/* ---------------------------------------------------------
+   HERO BACKGROUND GRID
+   --------------------------------------------------------- */
+
+.profile-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(11, 94, 215, 0.035) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(11, 94, 215, 0.035) 1px,
+            transparent 1px
+        );
+
+    background-size: 55px 55px;
+
+    mask-image: linear-gradient(
+        to bottom,
+        black 0%,
+        rgba(0,0,0,0.7) 60%,
+        transparent 100%
+    );
+
+    pointer-events: none;
+}
+
+
+/* ---------------------------------------------------------
+   HERO CONTAINER
+   --------------------------------------------------------- */
+
+.profile-hero-container {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 92%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+
+    gap: 70px;
+
+    padding: 90px 0;
+}
+
+
+/* ---------------------------------------------------------
+   LEFT CONTENT
+   --------------------------------------------------------- */
+
+.profile-hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+
+/* ---------------------------------------------------------
+   SMALL ACADEMIC LABEL
+   --------------------------------------------------------- */
+
+.profile-hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 8px 15px;
+
+    border: 1px solid var(--hero-border);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.78);
+
+    color: var(--hero-primary);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+
+    box-shadow:
+        0 8px 25px rgba(11, 94, 215, 0.07);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.profile-hero-label::before {
+    content: "";
+
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--hero-secondary);
+
+    box-shadow:
+        0 0 0 5px rgba(0, 166, 166, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   HERO TITLE
+   --------------------------------------------------------- */
+
+.profile-hero-title {
+    margin: 22px 0 12px;
+
+    color: var(--hero-text);
+
+    font-size: clamp(
+        2.8rem,
+        5vw,
+        5rem
+    );
+
+    line-height: 1.04;
+
+    font-weight: 800;
+
+    letter-spacing: -2.5px;
+}
+
+
+.profile-hero-title .highlight {
+    display: block;
+
+    background: linear-gradient(
+        90deg,
+        var(--hero-primary),
+        var(--hero-accent),
+        var(--hero-secondary)
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* ---------------------------------------------------------
+   HERO SUBTITLE
+   --------------------------------------------------------- */
+
+.profile-hero-subtitle {
+    max-width: 720px;
+
+    margin: 0 0 24px;
+
+    color: var(--hero-muted);
+
+    font-size: clamp(
+        1.1rem,
+        2vw,
+        1.35rem
+    );
+
+    line-height: 1.7;
+
+    font-weight: 500;
+}
+
+
+/* ---------------------------------------------------------
+   HERO DESCRIPTION
+   --------------------------------------------------------- */
+
+.profile-hero-description {
+    max-width: 690px;
+
+    margin-bottom: 32px;
+
+    color: #64748b;
+
+    font-size: 1rem;
+
+    line-height: 1.8;
+}
+
+
+/* ---------------------------------------------------------
+   HERO KEYWORDS
+   --------------------------------------------------------- */
+
+.profile-hero-keywords {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 34px;
+}
+
+
+.profile-hero-keywords span {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 13px;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--hero-border);
+
+    color: #334155;
+
+    font-size: 0.82rem;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 5px 18px rgba(15, 54, 92, 0.05);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+
+.profile-hero-keywords span:hover {
+    transform: translateY(-3px);
+
+    border-color: rgba(11, 94, 215, 0.30);
+
+    box-shadow:
+        0 10px 25px rgba(11, 94, 215, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   HERO BUTTONS
+   --------------------------------------------------------- */
+
+.profile-hero-actions {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 36px;
+}
+
+
+.profile-hero-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    min-height: 48px;
+
+    padding: 0 21px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 0.9rem;
+
+    font-weight: 700;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+
+.profile-hero-btn.primary {
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--hero-primary),
+            var(--hero-primary-dark)
+        );
+
+    box-shadow:
+        0 12px 28px rgba(11, 94, 215, 0.25);
+}
+
+
+.profile-hero-btn.primary:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 18px 35px rgba(11, 94, 215, 0.32);
+}
+
+
+.profile-hero-btn.secondary {
+    color: var(--hero-primary);
+
+    background: #ffffff;
+
+    border: 1px solid rgba(11, 94, 215, 0.18);
+}
+
+
+.profile-hero-btn.secondary:hover {
+    transform: translateY(-3px);
+
+    background: #f8fbff;
+
+    box-shadow:
+        0 12px 25px rgba(11, 94, 215, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   HERO SOCIAL LINKS
+   --------------------------------------------------------- */
+
+.profile-hero-socials {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.profile-hero-socials a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border: 1px solid var(--hero-border);
+
+    color: #52627a;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease,
+        background 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.profile-hero-socials a:hover {
+    transform: translateY(-3px);
+
+    color: var(--hero-primary);
+
+    background: #ffffff;
+
+    box-shadow:
+        0 10px 25px rgba(11, 94, 215, 0.10);
+}
+
+
+/* ---------------------------------------------------------
+   RIGHT SIDE — PROFILE VISUAL
+   --------------------------------------------------------- */
+
+.profile-hero-visual {
+    position: relative;
+
+    min-height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+/* ---------------------------------------------------------
+   PROFILE PHOTO CARD
+   --------------------------------------------------------- */
+
+.profile-hero-photo-card {
+    position: relative;
+
+    width: min(390px, 90%);
+
+    aspect-ratio: 0.82;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #eef6ff
+        );
+
+    border: 1px solid rgba(11, 94, 215, 0.10);
+
+    box-shadow:
+        var(--hero-shadow);
+
+    overflow: hidden;
+
+    z-index: 4;
+}
+
+
+.profile-hero-photo-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 230px;
+    height: 230px;
+
+    border-radius: 50%;
+
+    top: -100px;
+    right: -80px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(11, 94, 215, 0.20),
+            transparent 70%
+        );
+}
+
+
+.profile-hero-photo-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* ---------------------------------------------------------
+   PHOTO PLACEHOLDER
+   --------------------------------------------------------- */
+
+.profile-hero-photo-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #7b8ba3;
+
+    font-size: 0.95rem;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f7fbff,
+            #e8f2ff
+        );
+}
+
+
+/* ---------------------------------------------------------
+   ACADEMIC BADGE
+   --------------------------------------------------------- */
+
+.profile-hero-badge {
+    position: absolute;
+
+    z-index: 7;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 17px;
+
+    border-radius: 13px;
+
+    background: rgba(255,255,255,0.94);
+
+    border: 1px solid rgba(11, 94, 215, 0.12);
+
+    box-shadow:
+        0 15px 35px rgba(15, 54, 92, 0.12);
+
+    backdrop-filter: blur(12px);
+}
+
+
+.profile-hero-badge.top {
+    top: 40px;
+    left: -45px;
+}
+
+
+.profile-hero-badge.bottom {
+    bottom: 45px;
+    right: -45px;
+}
+
+
+.profile-hero-badge-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--hero-primary),
+            var(--hero-accent)
+        );
+}
+
+
+.profile-hero-badge-text {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.profile-hero-badge-text strong {
+    color: var(--hero-text);
+
+    font-size: 0.82rem;
+}
+
+
+.profile-hero-badge-text span {
+    color: var(--hero-muted);
+
+    font-size: 0.72rem;
+}
+
+
+/* ---------------------------------------------------------
+   FLOATING MATHEMATICAL SYMBOLS
+   --------------------------------------------------------- */
+
+.hero-math-symbol {
+    position: absolute;
+
+    color: rgba(11, 94, 215, 0.10);
+
+    font-family:
+        "Times New Roman",
+        serif;
+
+    font-weight: 700;
+
+    user-select: none;
+
+    pointer-events: none;
+
+    animation:
+        heroFloat 7s ease-in-out infinite;
+}
+
+
+.hero-math-symbol.symbol-1 {
+    top: 10%;
+    left: 4%;
+
+    font-size: 4rem;
+}
+
+
+.hero-math-symbol.symbol-2 {
+    top: 18%;
+    right: 7%;
+
+    font-size: 3.2rem;
+
+    animation-delay: -2s;
+}
+
+
+.hero-math-symbol.symbol-3 {
+    bottom: 15%;
+    left: 10%;
+
+    font-size: 3.5rem;
+
+    animation-delay: -4s;
+}
+
+
+.hero-math-symbol.symbol-4 {
+    bottom: 8%;
+    right: 38%;
+
+    font-size: 2.8rem;
+
+    animation-delay: -1s;
+}
+
+
+@keyframes heroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-14px) rotate(3deg);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   DECORATIVE ORBIT
+   --------------------------------------------------------- */
+
+.hero-orbit {
+    position: absolute;
+
+    width: 470px;
+    height: 470px;
+
+    border: 1px dashed rgba(11, 94, 215, 0.12);
+
+    border-radius: 50%;
+
+    z-index: 1;
+
+    animation:
+        orbitRotate 35s linear infinite;
+}
+
+
+.hero-orbit::before {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: var(--hero-secondary);
+
+    top: 18px;
+    left: 50%;
+
+    box-shadow:
+        0 0 0 8px rgba(0, 166, 166, 0.08);
+}
+
+
+@keyframes orbitRotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* ---------------------------------------------------------
+   RESEARCH INTERESTS STRIP
+   --------------------------------------------------------- */
+
+.profile-hero-research {
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 5px;
+}
+
+
+.profile-hero-research-label {
+    margin-right: 4px;
+
+    color: #7b8ba3;
+
+    font-size: 0.76rem;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+.profile-hero-research span {
+    color: #40516a;
+
+    font-size: 0.78rem;
+
+    font-weight: 600;
+}
+
+
+/* ---------------------------------------------------------
+   SCROLL INDICATOR
+   --------------------------------------------------------- */
+
+.profile-hero-scroll {
+    position: absolute;
+
+    left: 50%;
+    bottom: 24px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #7b8ba3;
+
+    font-size: 0.68rem;
+
+    letter-spacing: 1.2px;
+
+    text-transform: uppercase;
+}
+
+
+.profile-hero-scroll-line {
+    width: 1px;
+    height: 35px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            var(--hero-primary),
+            transparent
+        );
+
+    animation:
+        scrollPulse 2s ease-in-out infinite;
+}
+
+
+@keyframes scrollPulse {
+
+    0%,
+    100% {
+        opacity: 0.35;
+
+        transform: scaleY(0.7);
+        transform-origin: top;
+    }
+
+    50% {
+        opacity: 1;
+
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   TABLETS
+   --------------------------------------------------------- */
+
+@media (max-width: 1050px) {
+
+    .profile-hero-container {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        text-align: center;
+    }
+
+    .profile-hero-content {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .profile-hero-description {
+        max-width: 720px;
+    }
+
+    .profile-hero-visual {
+        min-height: 480px;
+    }
+
+    .profile-hero-badge.top {
+        left: 5%;
+    }
+
+    .profile-hero-badge.bottom {
+        right: 5%;
+    }
+
+    .hero-orbit {
+        width: 440px;
+        height: 440px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .profile-hero {
+        min-height: auto;
+    }
+
+    .profile-hero-container {
+        width: 90%;
+
+        padding: 65px 0 90px;
+
+        gap: 40px;
+    }
+
+    .profile-hero-title {
+        font-size: 2.65rem;
+
+        letter-spacing: -1.5px;
+    }
+
+    .profile-hero-subtitle {
+        font-size: 1rem;
+
+        line-height: 1.6;
+    }
+
+    .profile-hero-description {
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+    }
+
+    .profile-hero-actions {
+        justify-content: center;
+    }
+
+    .profile-hero-visual {
+        min-height: 430px;
+    }
+
+    .profile-hero-photo-card {
+        width: min(320px, 82%);
+    }
+
+    .profile-hero-badge {
+        padding: 10px 12px;
+    }
+
+    .profile-hero-badge.top {
+        top: 25px;
+        left: 0;
+    }
+
+    .profile-hero-badge.bottom {
+        bottom: 25px;
+        right: 0;
+    }
+
+    .profile-hero-badge-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .profile-hero-badge-text strong {
+        font-size: 0.72rem;
+    }
+
+    .profile-hero-badge-text span {
+        font-size: 0.64rem;
+    }
+
+    .hero-orbit {
+        width: 350px;
+        height: 350px;
+    }
+
+    .hero-math-symbol.symbol-1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-math-symbol.symbol-2 {
+        font-size: 2rem;
+    }
+
+    .hero-math-symbol.symbol-3 {
+        font-size: 2.2rem;
+    }
+
+    .hero-math-symbol.symbol-4 {
+        font-size: 1.8rem;
+    }
+
+    .profile-hero-scroll {
+        display: none;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   SMALL PHONES
+   --------------------------------------------------------- */
+
+@media (max-width: 430px) {
+
+    .profile-hero-container {
+        padding-top: 50px;
+    }
+
+    .profile-hero-title {
+        font-size: 2.25rem;
+    }
+
+    .profile-hero-label {
+        font-size: 0.68rem;
+
+        letter-spacing: 0.9px;
+    }
+
+    .profile-hero-keywords {
+        justify-content: center;
+    }
+
+    .profile-hero-actions {
+        width: 100%;
+    }
+
+    .profile-hero-btn {
+        width: 100%;
+    }
+
+    .profile-hero-socials {
+        justify-content: center;
+    }
+
+    .profile-hero-visual {
+        min-height: 390px;
+    }
+
+    .profile-hero-photo-card {
+        width: 270px;
+
+        border-radius: 22px;
+    }
+
+    .profile-hero-badge {
+        transform: scale(0.88);
+    }
+
+    .profile-hero-badge.top {
+        left: -8px;
+    }
+
+    .profile-hero-badge.bottom {
+        right: -8px;
+    }
+
+    .hero-orbit {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   ACCESSIBILITY
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero-math-symbol,
+    .hero-orbit,
+    .profile-hero-scroll-line {
+        animation: none;
+    }
+
+    .profile-hero-btn,
+    .profile-hero-keywords span,
+    .profile-hero-socials a {
+        transition: none;
+    }
+}
+
+
+/* ---------------------------------------------------------
+   PRINT
+   --------------------------------------------------------- */
+
+@media print {
+
+    .profile-hero {
+        min-height: auto;
+
+        background: #ffffff;
+    }
+
+    .profile-hero::before,
+    .hero-math-symbol,
+    .hero-orbit,
+    .profile-hero-scroll {
+        display: none;
+    }
+
+    .profile-hero-container {
+        display: block;
+
+        padding: 30px 0;
+    }
+
+    .profile-hero-title {
+        color: #000000;
+    }
+
+    .profile-hero-subtitle,
+    .profile-hero-description {
+        color: #333333;
+    }
+}
